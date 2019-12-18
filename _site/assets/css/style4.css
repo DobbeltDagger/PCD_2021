@@ -73,7 +73,7 @@ body {
   background: #FCFCFC;
   color: #152255;
   font-family: 'Rubik', sans-serif;
-  font-size: 24px;
+  font-size: 21px; /*  24px; */
   line-height: 1.4em;
   margin: 0px;
   padding: 0em;
@@ -90,16 +90,13 @@ body {
   align-items: stretch;
 }
 
-
 ul {
   list-style-type: square;
   list-style-position: outside;
   list-style-image: none;
 }
 ul li {
-  line-height: 1.4em; /* 32px; */
-  margin: 0px 0px 0.75em 0px;
-  padding-left: 0.25em;
+  margin: 0px;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -210,6 +207,38 @@ a img {
 
 
 
+/* GRID ********************************************************************* */
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Grid--gutters {
+  margin: -1em 0 1em -1em;
+}
+
+.Grid--gutters > .Grid-cell {
+  padding: 1em 0 0 1em;
+}
+/* full */
+.Grid--full > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+.Grid-cell {
+  flex: 1;
+  background: pink;
+}
+
+.maxWidth {
+  max-width: 1024px;
+  margin: 0px auto;
+}
+
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -222,15 +251,44 @@ a img {
 @media screen {
 
 
-  
-  #mainWrapper {
+  header {
+    flex: 0 0 100%; /* 15%; */
+    display: none;
+  }
+
+  #logo a {
+    position: absolute;
+    top: -5px;
+    left: -5px;
     display: block;
+    width: 80px; /* 100%; */
+    height: auto;
     float: left;
-    width: 100%;
-    padding: 2em 0px;
-    /*flex: 0 0 100%;
-    padding: 4em 0px 2em 0px;
-    overflow: hidden; */
+  }
+  #logo a img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #info {
+    display: block;
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    color: rgba(0,0,0,0.75);
+  }
+  #info p {
+    margin-bottom: 0px;
+  }
+
+  #menuWrapper {
+    flex: 0 0 100%; /* 15%; */
+    border: 1px solid blue;
+  }
+
+  #mainWrapper {
+    flex: 0 0 100%; 
+    padding: 0px 0.65em;
   }
 
   /* burger menu */
@@ -243,29 +301,6 @@ a img {
   }
   #mobileNavWrapper .inside {
     position: relative;
-  }
-  .mobileLogo {
-    display: block;
-    float: left;
-    position: absolute;
-    top: 0.65em; /* 1em; */
-    left: 1em; /* 1em; */
-  }
-  .mobileLogo a {
-    display: block;
-    float: left;
-    z-index: 100;
-    border-bottom: 0px;
-  }
-  .mobileLogo a:hover {
-    background: transparent;
-  }
-  .mobileLogo a img {
-    display: block;
-    float: left;
-    width: 47px; /* 35px; */
-    height: auto;
-    padding: 8px 30px 8px 0px;
   }
   /* float nav */
   .floatNavWrapper {
@@ -298,12 +333,11 @@ a img {
     display: block;
     width: 100%;
     float: left;
-    font-size: 1.2em; /* 0.85em; */
-    /* text-transform: uppercase; */
+    font-size: 1.2em;
     line-height: 3em; /* 3em; */
     text-align: center;
-    color: #036; /* #23171b; */
-    padding: 0px 0.95em; /* 0px 1.3em; */
+    color: #036;
+    padding: 0px 0.95em;
     border-top: 1px solid rgba(0,0,0,0.1);
     border-bottom: 1px solid transparent; /* rgba(0,0,0,0.0); */
   }
@@ -327,6 +361,22 @@ a img {
 /* 4. */
 @media screen and (min-width: 1024px) {
 
+
+  header {
+    flex: 0 0 15%;
+    display: block;
+  }
+
+  #logo a {
+    position: fixed; /* absolute; */
+    top: -5px;
+    left: -5px;
+    display: block;
+    width: 120px; /* 100%; */
+    height: auto;
+    float: left;
+  }
+
   #menuWrapper {
     flex: 0 0 15%;
   }
@@ -343,30 +393,13 @@ a img {
     /* float: right; */
     position: fixed;
     padding: 2.75em 0px 0px 0px;
-  }
-  .mobileLogo {
-    display: block;
-    float: left;
-    width: 100%;
-    margin: 0px 0px 0px 0px; /* 2em; */
-    position: relative;
-    top: 0px;
-    left: 1.3em;
-  }
-  .mobileLogo a {
-    margin-top: -8px;
-    border-bottom: 0px;
-  }
-  .mobileLogo a:hover {
-    background: transparent;
-    color: #003366;
   }  
   .floatNavWrapper #burger {
     display: none;
   }
   ul#mobileNav {
     text-align: right;
-    padding: 1.3em 1.3em 0.5em 1.3em; /* 1.5em 1.3em 0.5em 1.3em; */
+    padding: 0px 0px 0.5em 0px; /* 1.3em 1.3em 0.5em 1.3em; */
     margin-right: 0px; /* -0.9em; */
     max-height: none;
     height: auto;
