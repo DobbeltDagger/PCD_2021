@@ -13,5 +13,18 @@
   <div id="pageWrapper">
     {{ content | safe }}
   </div>
+
+  <!-- scripts here -->
+  <script src='./assets/js/App.js' type="text/javascript"></script>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", (e) => { 
+      
+      let app = new App();
+      app.init();
+
+    });
+    
+  </script>
 </body>
 
