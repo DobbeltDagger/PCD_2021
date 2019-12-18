@@ -258,8 +258,8 @@ a img {
   #info {
     display: block;
     position: fixed;
-    bottom: 1em;
-    left: 1em;
+    bottom: 0.9em; /* 1em; */
+    left: 0.9em; /* 1em; */
     color: rgba(0,0,0,0.75);
   }
   #info p {
@@ -277,7 +277,7 @@ a img {
 
   #mainWrapper {
     flex: 0 0 100%; 
-    padding: 0px 0.65em;
+    padding: 0px 1em; /* 0px 0.65em; */
   }
 
   /* burger menu */
@@ -358,7 +358,7 @@ a img {
 
   header {
     flex: 0 0 15%;
-    display: block;
+    display: block;    
   }
 
   #logo a {
@@ -378,7 +378,7 @@ a img {
 
   #mainWrapper {
     flex: 0 0 70%;
-    padding-top: 3em; /* 0px; */
+    padding-top: 1em; /* 3em; /* 0px; */
     padding-bottom: 0px;
   }
 
@@ -387,7 +387,7 @@ a img {
     display: block;
     width: 15vw;
     position: fixed;
-    padding: 1em 0px 0px 1em; /* 2.75em 0px 0px 0px; */
+    padding: 0.9em 0px 0px 0.9em; /* 1em 0px 0px 1em; /* 2.75em 0px 0px 0px; */
   }  
   .burgerWrapper #burger {
     display: none;
