@@ -222,6 +222,17 @@ a img {
 @media screen {
 
 
+  
+  #mainWrapper {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 2em 0px;
+    /*flex: 0 0 100%;
+    padding: 4em 0px 2em 0px;
+    overflow: hidden; */
+  }
+
   /* burger menu */
   #mobileNavWrapper {
     padding: 0px 0px 0px 0px;
@@ -318,6 +329,11 @@ a img {
 
   #menuWrapper {
     flex: 0 0 15%;
+  }
+
+  #mainWrapper {
+    flex: 0 0 70%;
+    padding: 2.75em 0px 1em 0px;
   }
 
   /* burger menu */
