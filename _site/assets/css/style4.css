@@ -240,19 +240,37 @@ a img {
     display: none;
   }
 
-  #logo a {
+  /* round logo */
+  #logo a.round {
     position: absolute;
     top: -5px;
     left: -5px;
-    display: block;
     width: 80px; /* 100%; */
     height: auto;
     float: left;
     z-index: 1000;
+    display: none;
   }
-  #logo a img {
+  #logo a.round img {
     max-width: 100%;
     height: auto;
+  }
+
+  /* text logo */
+  #logo a.text {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    display: block;
+    width: auto;
+    float: left;
+    font-size: 32px;
+    font-weight: 700;
+    color: #003366;
+    z-index: 1000;
+  }
+  #logo a.text:hover {
+    text-decoration: none;
   }
 
   #info {
@@ -361,14 +379,18 @@ a img {
     display: block;    
   }
 
-  #logo a {
+  #logo a.text {
+    display: none;
+  }
+
+  #logo a.round {
     position: fixed; /* absolute; */
     top: -3px;
     left: -3px;
-    display: block;
     width: 120px;
     height: auto;
     float: left;
+    display: block;
   }
 
   #menuWrapper {
