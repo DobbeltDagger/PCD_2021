@@ -137,49 +137,35 @@ a img {
 }
 
 /* NAV ICON */
-.burgerWrapper #burger {
+.burgerWrapper a#burger {
+  display: block;
+  float: right;
+  padding: 0px;
+  margin: 0px;
+  color: #003366;
+}
+
+.burgerWrapper a#burger #burgerIcon,
+.burgerWrapper a#burger #crossIcon {
   outline: none;
   border: none;
   display: block;
   float: right;
   cursor: pointer;
   background-color: transparent;
-  width: 5.5rem; /* 6rem; */
-  height: 66px;
   margin: 0px;
-  padding: 0px 1em;
 }
-.burgerWrapper #burger span {
-  background-color: #036; /* #23171b; */
-  width: 100%;
-  height: 5px;
-  border-radius: 2px;
-  position: relative;
-  display: block;
-  margin: auto;
-  top: 0px;
+.burgerWrapper a#burger #burgerIcon {
+  padding: 0.25em 0.8em 0px 0.6em;
 }
-.burgerWrapper #burger span:before {
-  content: '';
-  background-color: #036; /* #23171b; */
-  width: 100%;
-  height: 5px;
-  border-radius: 2px;
-  display: block;
-  top: -13px;
-  position: absolute;
-}
-.burgerWrapper #burger span:after {
-  content: '';
-  background-color: #036; /* #23171b; */
-  width: 100%;
-  height: 5px;
-  border-radius: 2px;
-  display: block;
-  position: absolute;
-  top: 13px;
+.burgerWrapper a#burger #crossIcon {
+  padding: 0.25em 0.5em 0px 0.9em;
 }
 
+.burgerWrapper a#burger #burgerIcon.hide,
+.burgerWrapper a#burger #crossIcon.hide {
+  display: none;
+}
 
 
 /* GRID ********************************************************************* */
@@ -206,7 +192,7 @@ a img {
 
 .Grid-cell {
   flex: 1;
-  background: pink;
+  /* background: pink; */
 }
 
 .maxWidth {
@@ -259,7 +245,7 @@ a img {
   /* text logo */
   #logo a.text {
     position: absolute;
-    top: 18px;
+    top: 19px;
     left: 18px;
     display: block;
     width: auto;
@@ -372,6 +358,12 @@ a img {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
+  }
+
+  /* no mobile nav */
+  .burgerWrapper a#burger #burgerIcon,
+  .burgerWrapper a#burger #crossIcon {
+    display: none;
   }
 
   header {

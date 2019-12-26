@@ -17,8 +17,10 @@ App.prototype = {
       console.log("burger was clicked!")
       e.preventDefault();
 
-      const mnav = document.getElementById('mobileNav');
-      mnav.classList.toggle("hide");
+      document.getElementById('mobileNav').classList.toggle("hide");
+      document.getElementById('burgerIcon').classList.toggle('hide');
+      document.getElementById('crossIcon').classList.toggle('hide');
+
     })
     
   },
