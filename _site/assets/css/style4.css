@@ -167,37 +167,15 @@ a img {
   display: none;
 }
 
-
-/* GRID ********************************************************************* */
-
-.Grid {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.Grid--gutters {
-  margin: -1em 0 1em -1em;
-}
-
-.Grid--gutters > .Grid-cell {
-  padding: 1em 0 0 1em;
-}
-/* full */
-.Grid--full > .Grid-cell {
-  flex: 0 0 100%;
-}
-
-.Grid-cell {
-  flex: 1;
-  /* background: pink; */
-}
-
 .maxWidth {
   max-width: 1024px;
   margin: 0px auto;
+}
+
+
+#mapSource {
+  width: 100%;
+  height: 480px;
 }
 
 
