@@ -1,9 +1,6 @@
 #!/bin/bash
-# THUMBS_FOLDER=C:/xampp/htdocs/GRASSLANDS/TRASH/Thorum/proces/thumbsTest
 LARGE_FOLDER=./large
 THUMBS_FOLDER=./thumbs
-# for file in C:/xampp/htdocs/GRASSLANDS/TRASH/Thorum/proces/large/*
-# for file in ./large/*
 for file in ./*.jpg
 do
 
@@ -15,10 +12,8 @@ do
   filename="${filename%.*}"
   filename="${filename// /_}" # remove spaces
 
-  # newline in string and then file:
+  # newline in string and then in file:
   # https://unix.stackexchange.com/questions/191694/how-to-put-a-newline-special-character-into-a-file-using-the-echo-command-and-re
-  newline=$'\n'
-  testvar="TESTING"
   title="title: 'This is the first image'"
   desc="description: 'This is the description of the image'"
   imgUrl="imageUrl: '/assets/galleryThumbs/${filename}.jpg'"
