@@ -5,7 +5,7 @@
   <div class='maxWidth'>
     {% for thumb in collections.PCD2019gallery %}
       <p>hello {{ thumb.data.title }}</p>
-      <img src={{ thumb.data.imageUrl }} />
+      <img src='{{ thumb.data.imageUrl }}' class='maxWidth' alt='{{ thumb.data.title }}' title='{{ thumb.data.title }}' />
     {% endfor %}
   </div>
 
