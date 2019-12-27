@@ -1,0 +1,12 @@
+{% extends "base.njk" %}
+
+{% block postContent %}
+
+  <div class='maxWidth'>
+    {% for thumb in collections.PCD2019gallery %}
+      <p>hello {{ thumb.data.title }}</p>
+      <img src={{ thumb.data.imageUrl }} />
+    {% endfor %}
+  </div>
+
+{% endblock postContent %}

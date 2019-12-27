@@ -172,12 +172,11 @@ a img {
   margin: 0px auto;
 }
 
-
+/* map */
 #mapSource {
   width: 100%;
   height: 480px;
 }
-
 
 /* padlet */
 .padlet-embed {
@@ -197,7 +196,6 @@ a img {
   padding: 0px;
   margin: 0px;
 }
-
 
 
 
@@ -603,10 +601,16 @@ a img {
 /* 4. */
 @media screen and (min-width: 1280px) {
   
+  .resourceEntry {
+    flex: 0 0 25%;
+  }
+
+  .whyCodeEntry {
+    flex: 0 0 33.3333%;
+  }
 
 
 }
-
 
 
 /* ****************************************************************** */
