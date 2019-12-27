@@ -71,15 +71,18 @@ html {
 }
 
 body {
-  width: 100%;
-  background: yellow; /* #FCFCFC; */
-  color: #152255;
-  font-family: 'Rubik', sans-serif;
-  font-size: 21px; /*  24px; */
-  line-height: 1.4em;
-  margin: 0px;
-  padding: 0em;
   height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #201b3f;
+  font-weight: 400;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background: lightgrey;
 }
 
 ul {
@@ -95,12 +98,17 @@ ul li {
 /* TYPE STUFF */
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700; /* bold; /* normal; */
-  line-height: 1.25em;
-  margin: 0px 0px 0.5em 0px;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.2em;
+  color: #393743;
+  font-family: 'EB Garamond', serif;
 }
+
 h2 {
-  font-size: 1.35em;
+  font-size: 29px;
   padding: 0px;
 }
 h3 {
@@ -110,11 +118,11 @@ h3 {
 
 p {
   font-size: 1em;
-  margin: 0px 0px 1.35em 0px; /* 0px 0px 2em 0px; */
+  margin: 0px 0px 1em 0px; /* 0px 0px 2em 0px; */
 }
 
 /* INLINE LINKS */
-a { text-decoration: none; color: blue; outline: 0; }
+a { text-decoration: none; color: tomato; outline: 0; }
 a:active, a:focus { outline: 0; }
 a:hover { text-decoration: underline; outline: none; }
 
@@ -130,11 +138,6 @@ a img {
 
 /* ************************************************************************** */
 /* Other Wrappers */
-
-
-#menuWrapper {
-  background: lightgreen;
-}
 
 /* NAV ICON */
 .burgerWrapper a#burger {
@@ -178,6 +181,12 @@ a img {
   height: 480px;
 }
 
+/* imgs fit column */
+.fitColumn {
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -202,18 +211,28 @@ a img {
   header {
     flex: 0 0 100%; /* 15%; */
     display: none;
+    background: #ffff00;
+    background: -moz-linear-gradient(top, #ffff00 1%, #eedd00 100%);
+    background: -webkit-linear-gradient(top, #ffff00 1%,#eedd00 100%);
+    background: linear-gradient(to bottom, #ffff00 1%,#eedd00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#eedd00',GradientType=0 );
+  }
+  
+  #logo {
+    position: relative;
   }
 
   /* round logo */
   #logo a.round {
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 80px; /* 100%; */
-    height: auto;
+    position: fixed; /* absolute; */
+    top: -0.05em;
+    left: -0.05em;
+    width: 118px;
+    height: auto;    
     float: left;
     z-index: 1000;
     display: none;
+    opacity: 0.78;
   }
   #logo a.round img {
     max-width: 100%;
@@ -227,7 +246,7 @@ a img {
     left: 18px;
     display: block;
     width: auto;
-    float: left;
+    /* float: left; */
     font-size: 32px;
     font-weight: 700;
     color: #003366;
@@ -255,6 +274,7 @@ a img {
   #menuWrapper {
     flex: 0 0 100%; /* 15%; */
     margin-bottom: 2em;
+    background: rgba(255,255,0,0.1);
   }
 
   #mainWrapper {
@@ -306,18 +326,19 @@ a img {
     text-align: center;
     padding: 0.5em;
     font-weight: 500;
-    color: #036;
+    color: #333; /* #036; */
     font-family: 'EB Garamond', serif;
     text-transform: capitalize;
   }
   ul#mobileNav li a:hover {
     text-decoration: underline;
     border-bottom: 1px solid transparent;
-    background: rgba(0,51,102,.05);
+    color: #333;
+    background: rgba(51,51,51,.05); /* rgba(0,51,102,.05); */
   }
   ul#mobileNav li a.chosen {
     text-decoration: line-through;
-    color: #003366;
+    color: #333; /* #003366; */
   }
 
 }
@@ -354,12 +375,12 @@ a img {
   }
 
   #logo a.round {
-    position: fixed; /* absolute; */
-    top: -3px;
-    left: -3px;
-    width: 120px;
+    /*position: fixed;
+    top: -0.05em;
+    left: -0.05em;
+    width: 118px;
     height: auto;
-    float: left;
+    float: left; */
     display: block;
   }
 
@@ -420,12 +441,8 @@ a img {
     text-decoration: underline;
     border: 0px;
     background: transparent;
-    color: #003366;
+    color: #333; /* #003366; */
   }
-  ul#mobileNav .firstname {
-    display: none;
-  }
-
 
 }
 
