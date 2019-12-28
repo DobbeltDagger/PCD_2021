@@ -3,10 +3,24 @@
 {% block postContent %}
 
   <div class='maxWidth'>
-    {% for thumb in collections.PCD2019gallery %}
-      <p>hello {{ thumb.data.title }}</p>
-      <img src='{{ thumb.data.imageUrl }}' class='maxWidth' alt='{{ thumb.data.title }}' title='{{ thumb.data.title }}' />
-    {% endfor %}
+    <div id='galleryWrapper'>
+      {% for thumb in collections.PCD2019gallery %}
+        <a
+          data-mediabox="PCD2019Gallery"
+          data-title="Processing Community Day @Aarhus 2019"
+          href='{{ thumb.data.imageUrl }}'
+          title='{{ thumb.data.title }}'
+          alt='{{ thumb.data.title }}'>
+          <img src='{{ thumb.data.thumbUrl }}' class='maxWidth' alt='{{ thumb.data.title }}' title='{{ thumb.data.title }}' />
+        </a>
+      {% endfor %}
+    </div>
+
+    <!-- gallery wrapper -->
+    <!-- <div id="galleryWrapper">
+      <a href="./images/Thorum/Gallery/large/Thorum_galleri_nr_01.jpg" data-mediabox="ThorumGallery" data-title="Thorum, procesbilleder" title="Thorum, procesbilleder" alt="Thorum, procesbilleder"><img src="./images/Thorum/Gallery/thumbs/Thorum_galleri_nr_01_thumb.png" alt="Image" /></a>
+    </div> --> <!-- eof gallerywrapper-->
+
   </div>
 
 {% endblock postContent %}

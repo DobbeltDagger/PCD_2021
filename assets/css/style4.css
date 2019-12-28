@@ -131,7 +131,6 @@ a img {
 /* ************************************************************************** */
 /* Other Wrappers */
 
-
 #menuWrapper {
   background: lightgreen;
 }
@@ -200,6 +199,30 @@ a img {
 img.maxWidth {
   max-width: 100%;
   height: auto;
+}
+
+/* Gallery wrapper ******************************* */
+
+#galleryWrapper {
+  display: block;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 0 -0.25em;
+}
+
+#galleryWrapper a {
+  flex: 0 0 25%;
+}
+
+#galleryWrapper a img {
+  width: 100%;
+  height: auto;
+  display: block;
+  float: left;
 }
 
 
