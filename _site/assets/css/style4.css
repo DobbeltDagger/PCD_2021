@@ -97,7 +97,7 @@ ul li {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700; /* bold; /* normal; */
   line-height: 1.3em; /* 1.25em; */
-  margin: 0px 0px 0.5em 0px;
+  margin: 0px 0px 0em 0px; /* 0px 0px 0.5em 0px; */
 }
 h2 {
   font-size: 1.5em; /* 1.35em; */
@@ -229,7 +229,7 @@ img.maxWidth {
 
 .programEntry {
   width: 100%;
-  padding: 0.5em 0px;
+  padding: 0.4em 0px; /* 0.5em 0px; */
   border-bottom: 1px solid rgba(32, 27, 63, 0.1);
 }
 
@@ -455,6 +455,10 @@ img.maxWidth {
     display: block;
     float: left;
     /* margin-bottom: 1.5em; */
+  }
+  .resourceEntry a,
+  .peopleEntry a {
+    overflow-wrap: break-word;
   }
   .peopleEntry span.whyCode {
     display: block;
