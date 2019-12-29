@@ -211,11 +211,12 @@ img.maxWidth {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: stretch;
-  margin: 0 -0.25em;
+  margin: 0 -0.25em 1.5em -0.25em;
 }
 
 #galleryWrapper a {
   flex: 0 0 25%;
+  padding: 0px 0.25em 0.5em 0.25em;
 }
 
 #galleryWrapper a img {
@@ -223,6 +224,33 @@ img.maxWidth {
   height: auto;
   display: block;
   float: left;
+}
+
+/* Program entries ******************************** */
+
+.programEntry {
+  width: 100%;
+  padding: 0.5em 0px;
+  border-bottom: 1px solid rgba(32, 27, 63, 0.1);
+}
+
+.programEntry span.timeWrapper {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+.programEntry span.infoWrapper {
+  display: inline-block;
+}
+
+.programEntry span.title {
+  font-style: italic;
+  background: rgba(255, 255, 0, 0.4);
+  padding: 2px 3px;
+}
+
+.programEntry span.lead {
+  padding-right: 1em;
 }
 
 
@@ -367,7 +395,7 @@ img.maxWidth {
     border-bottom: 1px solid transparent;
     background: rgba(0,51,102,.05);
   }
-  ul#mobileNav li a.chosen {
+  ul#mobileNav li a.active {
     text-decoration: line-through;
     color: #003366;
   }

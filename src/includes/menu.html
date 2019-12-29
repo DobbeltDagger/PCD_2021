@@ -1,0 +1,36 @@
+{% set menuItems = [
+  {
+    title: "Program",
+    url: "/program"
+  },
+  {
+    title: "Resources",
+    url: "/resources"
+  },
+  {
+    title: "About",
+    url: "/about"
+  },
+  {
+    title: "Gallery",
+    url: "/gallery"
+  },
+  {
+    title: "Why Code?",
+    url: "/whycode"
+  },
+  {
+    title: "Open Call",
+    url: "/opencall"
+  },
+  {
+    title: "Archive",
+    url: "/archive"
+  }
+] %}
+<ul class="hide" id="mobileNav">
+  {% for item in menuItems %}
+    <!-- <span>item.url: {{ item.url }} | page.url: {{ page.url }}</span> -->
+    <li><a href='{{ item.url }}' {% if item.url in page.url %} class="active"{% endif %}>{{ item.title }}</a></li>
+  {% endfor %}
+</ul>
