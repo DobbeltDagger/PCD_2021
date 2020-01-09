@@ -55,6 +55,12 @@ sub { bottom: -0.25em }
   background-color: transparent;
 }
 
+/* imgs fit column */
+.fitColumn {
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* SITE SPECIFIC styling ++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -369,10 +375,10 @@ img.maxWidth {
     margin-bottom: 0px;
     flex: 0 0 100%;
     height: auto;
-    max-height: 420px;
+    /* max-height: 420px; */
     border-bottom: 1px solid rgba(0,0,0,0.1);
     overflow: hidden;
-    transition: max-height 0.2s ease;
+    /* transition: max-height 0.2s ease; */
   }
   ul.mobileNav li {
     display: block;
@@ -402,6 +408,9 @@ img.maxWidth {
   ul.mobileNav li.active a {
     text-decoration: line-through;
     color: #333; /* #003366; */
+  }
+  ul.mobileNav li ul {
+    display: none;
   }
 
   /* other wrappers */
