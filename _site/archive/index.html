@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="PCD @Aarhus 2019, How to think about code differently. For PCD @ Aarhus 2019, we are aiming to build an open and local community to explore code and coding practice in many different ways beyond science and engineering specialisation and functional applications development.">
+  <meta name="description" content="PCD @ Aarhus 2020 will address the notion of openness and sharing in software ecology, referring broadly to the open/free paradigm for social participation and engagement to create a sustainable community. With inspiration from the free/open-source software movement we want to promote the idea of having the freedom and rights to use, study, create, modify and share software regardless of age, gender, race and class.">
   <link rel="icon" href="/assets/images/favicon.png" sizes="128x128" type="image/png">
-  <title>Processing Community Day @Aarhus 2019</title>
+  <title>Archive | Processing Community Day @ Aarhus 2020</title>
   <link href="/assets/css/grid.css" rel="stylesheet" />
-  <link href="/assets/css/2019_style.css" rel="stylesheet" />
+  <link href="/assets/css/style4.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="/assets/js/libs/wa-mediabox/wa-mediabox.css">
   <script type="text/javascript" src="/assets/js/libs/wa-mediabox/wa-mediabox.min.js"></script>
 </head>
@@ -18,25 +18,89 @@
 
     <div id="logo">
       <a href="/" class='round'><img src="/assets/images/pcdLogo2.png"></a>
-      <a href="/" class='text'>PCD2019</a>
+      <a href="/" class='text'>PCD2020</a>
     </div>
     <header>
       <div id="info">
-        <p>Processing<br>Community<br>Day<br>Aarhus<br>Saturday,<br>February 9th<br>11.00–15.30<br>@DOKK1</p>
+        <p>Processing<br>Community<br>Day<br>Aarhus<br>Saturday,<br>February 22nd<br>00.00–24.00<br>@DOKK1</p>
       </div>
     </header>
 
     
 
 <div id="menuWrapper" class='unselectable'>
+  <div class="burgerWrapper">
+    <!-- burger -->
+    <a id="burger">
+      <div id="burgerIcon">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="54" height="54" width="54"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+      </div>
+      <!-- cross -->
+      <div id="crossIcon" class='hide'>
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="54" height="54" width="54"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+      </div>
+    </a>
+  </div>
+  <div id="mobileNavWrapper" class='hide'>
+    <ul class="mobileNav"><li><a href="/program/">Program</a></li>
+<li><a href="/resources/">Resources</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/gallery/">Gallery</a></li>
+<li class="active"><a href="/archive/" class="activeAnchor">Archive</a></li></ul>
+
+    <!-- // It’s likely you want to pass in `eleventyNavigation.key` here, e.g.:
+    // activeKey: eleventyNavigation.key
+    // YES, THIS IS VERY IMPORTANT!!! -->
+
+    <!-- from here: https://www.11ty.dev/docs/plugins/navigation/#template-compatibility -->
+    <!-- 
+    <ul>
+      <li>
+        <a href="/program/">Program</a>
+      </li>
+      <li>
+        <a href="/resources/">Resources</a>
+      </li>
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      <li>
+        <a href="/gallery/">Gallery</a>
+      </li>
+      <li class="my-active-class">
+        <a href="/archive/">Archive</a>
+      </li>
+    </ul>
+    -->
+
+    <!-- <ul class="hide" id="mobileNav">
+      <li class='frontLink'><a href='/'>/*.*</a></li>
+      
+        <li><a href='/program' >Program</a></li>
+      
+        <li><a href='/resources' >Resources</a></li>
+      
+        <li><a href='/about' >About</a></li>
+      
+        <li><a href='/gallery' >Gallery</a></li>
+      
+        <li><a href='/whycode' >Why Code?</a></li>
+      
+        <li><a href='/2019_index' >Archive</a></li>
+      
+    </ul> -->    
+  </div>
+</div>
+
+
+<!-- 
+<div id="menuWrapper" class='unselectable'>
   <div id="mobileNavWrapper">
     <div class="burgerWrapper">
-      <!-- burger -->
       <a id="burger">
         <div id="burgerIcon">
           <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="54" height="54" width="54"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
         </div>
-        <!-- cross -->
         <div id="crossIcon" class='hide'>
           <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="54" height="54" width="54"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </div>
@@ -44,23 +108,22 @@
     </div>
     <ul class="hide" id="mobileNav">
       
-        <li><a href='/2019_program' >Program</a></li>
+        <li><a href='/program' >Program</a></li>
       
-        <li><a href='/2019_resources' >Resources</a></li>
+        <li><a href='/resources' >Resources</a></li>
       
-        <li><a href='/2019_about' >About</a></li>
+        <li><a href='/about' >About</a></li>
       
-        <li><a href='/2019_gallery' >Gallery</a></li>
+        <li><a href='/gallery' >Gallery</a></li>
       
-        <li><a href='/2019_whycode' >Why Code?</a></li>
+        <li><a href='/whycode' >Why Code?</a></li>
       
-        <li><a href='/2019_opencall' >Open Call</a></li>
+        <li><a href='/2019_index' >Archive</a></li>
       
     </ul>
   </div>
 </div>
-
-
+-->
 
     <div id="mainWrapper">
       
@@ -74,7 +137,9 @@
 
     <div class="Grid Grid--gutters Grid--full large-Grid--fit">
       <div class="Grid-cell">    
-        <p>Archive here</p>
+        <p>
+          <strong>PCD @Aarhus 2019, <em>How to think about code differently</em></strong><br/>For PCD @ Aarhus 2019, we are aiming to build an open and local community to explore code and coding practice in many different ways beyond science and engineering specialisation and functional applications development. Together with each of you from diverse backgrounds, we would like to explore how could we think about code differently and creatively via art, design and beyond.<br/><a href='../2019/2019_index'>Link to PCD @Aarhus 2019 here</a>
+        </p>
       </div>
     </div>        
 
