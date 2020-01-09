@@ -345,6 +345,14 @@ img.maxWidth {
   /* burger menu */
   #mobileNavWrapper {
     flex: 0 0 100%;
+    overflow: hidden;
+    height: auto;
+    max-height: 420px;
+    transition: max-height 0.2s ease;
+  }
+  #mobileNavWrapper.hide {
+    max-height: 0px;
+    border-bottom: 1px solid transparent;
   }
   /* burger nav */
   .burgerWrapper {
@@ -356,7 +364,7 @@ img.maxWidth {
     clear: both;
   }
   /* mobileNav */
-  ul#mobileNav {
+  ul.mobileNav {
     list-style: none;
     margin-bottom: 0px;
     flex: 0 0 100%;
@@ -366,16 +374,12 @@ img.maxWidth {
     overflow: hidden;
     transition: max-height 0.2s ease;
   }
-  ul#mobileNav.hide {
-    max-height: 0px;
-    border-bottom: 1px solid transparent;
-  }
-  ul#mobileNav li {
+  ul.mobileNav li {
     display: block;
     width: 100%;
     float: left;
   }
-  ul#mobileNav li a {
+  ul.mobileNav li a {
     display: block;
     width: 100%;
     float: left;
@@ -390,12 +394,12 @@ img.maxWidth {
     font-family: 'EB Garamond', serif;
     text-transform: capitalize;
   }
-  ul#mobileNav li a:hover {
+  ul.mobileNav li a:hover {
     text-decoration: underline;
     border-bottom: 1px solid transparent;
     background: rgba(51,51,51,.05); /* rgba(0,51,102,.05); */
   }
-  ul#mobileNav li a.active {
+  ul.mobileNav li.active a {
     text-decoration: line-through;
     color: #333; /* #003366; */
   }
@@ -602,14 +606,18 @@ img.maxWidth {
   /* burger menu */
   #mobileNavWrapper {
     display: block;
-    width: 15vw;
+    width: 20vw; /* 15vw; */
     position: fixed;
-    padding: 0.9em 0px 0px 0.9em; /* 1em 0px 0px 1em; /* 2.75em 0px 0px 0px; */
-  }  
+    padding: 0.9em 0px 0px 0.9em;
+  }
+  #mobileNavWrapper.hide {
+    height: auto;
+    max-height: none;
+  } 
   .burgerWrapper #burger {
     display: none;
   }
-  ul#mobileNav {
+  ul.mobileNav {
     text-align: right;
     padding: 0px 0px 0.5em 0px; /* 1.3em 1.3em 0.5em 1.3em; */
     margin-right: 0px; /* -0.9em; */
@@ -617,21 +625,16 @@ img.maxWidth {
     height: auto;
     border-bottom: 1px solid transparent;
     text-align: left;
-    /* border: 1px solid red; */
   }
-  ul#mobileNav.hide {
-    height: auto;
-    max-height: none;
-  }
-  ul#mobileNav li {
+  ul.mobileNav li {
     display: block; /* inline-block; */
     width: 100%; /* auto; */
     float: left; /* none; */
   }
-  ul#mobileNav li:first-child {
+  ul.mobileNav li:first-child {
     border-top: 0px;
   }
-  ul#mobileNav li a {
+  ul.mobileNav li a {
     display: block;
     float: left;
     width: auto;
@@ -642,16 +645,12 @@ img.maxWidth {
     font-size: 29px;
     line-height: 34px;
   }
-  ul#mobileNav li a:hover {
+  ul.mobileNav li a:hover {
     text-decoration: underline;
     border: 0px;
     background: transparent;
     color: #333333; /* #003366; */
   }
-  ul#mobileNav .firstname {
-    display: none;
-  }
-
 
   /* other wrappers */
   #galleryWrapper a {

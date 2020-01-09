@@ -29,14 +29,82 @@
     
 
 <div id="menuWrapper" class='unselectable'>
+  <div class="burgerWrapper">
+    <!-- burger -->
+    <a id="burger">
+      <div id="burgerIcon">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="54" height="54" width="54"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+      </div>
+      <!-- cross -->
+      <div id="crossIcon" class='hide'>
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="54" height="54" width="54"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+      </div>
+    </a>
+  </div>
+  <div id="mobileNavWrapper" class='hide'>
+    <ul class="mobileNav"><li><a href="/program/">Program</a></li>
+<li><a href="/resources/">Resources</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/gallery/">Gallery</a></li>
+<li><a href="/whycode/">Why Code?</a></li>
+<li><a href="/opencall/">Open Call</a></li></ul>
+
+    <!-- // It’s likely you want to pass in `eleventyNavigation.key` here, e.g.:
+    // activeKey: eleventyNavigation.key
+    // YES, THIS IS VERY IMPORTANT!!! -->
+
+    <!-- from here: https://www.11ty.dev/docs/plugins/navigation/#template-compatibility -->
+    <!-- 
+    <ul>
+      <li>
+        <a href="/program/">Program</a>
+      </li>
+      <li>
+        <a href="/resources/">Resources</a>
+      </li>
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      <li>
+        <a href="/gallery/">Gallery</a>
+      </li>
+      <li>
+        <a href="/whycode/">Why Code?</a>
+      </li>
+      <li>
+        <a href="/opencall/">Open Call</a>
+      </li>
+    </ul>
+    -->
+
+    <!-- <ul class="hide" id="mobileNav">
+      <li class='frontLink'><a href='/'>/*.*</a></li>
+      
+        <li><a href='/program' >Program</a></li>
+      
+        <li><a href='/resources' >Resources</a></li>
+      
+        <li><a href='/about' >About</a></li>
+      
+        <li><a href='/gallery'  class="active">Gallery</a></li>
+      
+        <li><a href='/whycode' >Why Code?</a></li>
+      
+        <li><a href='/2019_index' >Archive</a></li>
+      
+    </ul> -->    
+  </div>
+</div>
+
+
+<!-- 
+<div id="menuWrapper" class='unselectable'>
   <div id="mobileNavWrapper">
     <div class="burgerWrapper">
-      <!-- burger -->
       <a id="burger">
         <div id="burgerIcon">
           <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="54" height="54" width="54"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
         </div>
-        <!-- cross -->
         <div id="crossIcon" class='hide'>
           <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="54" height="54" width="54"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </div>
@@ -44,29 +112,22 @@
     </div>
     <ul class="hide" id="mobileNav">
       
-        <!-- <span>item.url: /program | page.url: /galleryThumbCollection/13/</span> -->
         <li><a href='/program' >Program</a></li>
       
-        <!-- <span>item.url: /resources | page.url: /galleryThumbCollection/13/</span> -->
         <li><a href='/resources' >Resources</a></li>
       
-        <!-- <span>item.url: /about | page.url: /galleryThumbCollection/13/</span> -->
         <li><a href='/about' >About</a></li>
       
-        <!-- <span>item.url: /gallery | page.url: /galleryThumbCollection/13/</span> -->
         <li><a href='/gallery'  class="active">Gallery</a></li>
       
-        <!-- <span>item.url: /whycode | page.url: /galleryThumbCollection/13/</span> -->
         <li><a href='/whycode' >Why Code?</a></li>
       
-        <!-- <span>item.url: /2019_index | page.url: /galleryThumbCollection/13/</span> -->
         <li><a href='/2019_index' >Archive</a></li>
       
     </ul>
   </div>
 </div>
-
-
+-->
 
     <div id="mainWrapper">
       

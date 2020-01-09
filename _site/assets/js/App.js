@@ -17,10 +17,9 @@ App.prototype = {
       console.log("burger was clicked!")
       e.preventDefault();
 
-      document.getElementById('mobileNav').classList.toggle("hide");
+      document.getElementById('mobileNavWrapper').classList.toggle("hide");
       document.getElementById('burgerIcon').classList.toggle('hide');
       document.getElementById('crossIcon').classList.toggle('hide');
-
     })
     
   },
