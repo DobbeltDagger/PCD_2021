@@ -144,7 +144,8 @@ a img {
   float: right;
   padding: 0px;
   margin: 0px;
-  color: #003366;
+  /* color: #003366; */
+  color: #201b3f;
 }
 
 .burgerWrapper a#burger #burgerIcon,
@@ -321,7 +322,8 @@ a img {
     font-family: 'EB Garamond', serif;
     font-size: 36px;
     font-weight: 800; /* 700; */
-    color: #003366;
+    /* color: #003366; */
+    color: #201b3f;
     z-index: 1000;
   }
   #logo a.text:hover {

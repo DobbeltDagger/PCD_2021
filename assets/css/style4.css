@@ -77,8 +77,8 @@ html {
 
 body {
   width: 100%;
-  background: #FCFCFC;
-  color: #152255;
+  background:whitesmoke; /* #FCFCFC; */
+  color: rgba(32,16,48,0.82); /* rebeccapurple; /* #152255; */
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
   line-height: 1.4em;
@@ -138,7 +138,7 @@ a img {
 /* Other Wrappers */
 
 #menuWrapper {
-  background: lightgreen;
+  background: white;/* yellow; /* orange; /* white; /* lightSkyBlue; /* lightgreen; */
 }
 
 /* NAV ICON */
@@ -147,7 +147,8 @@ a img {
   float: right;
   padding: 0px;
   margin: 0px;
-  color: #003366;
+  /* color: #003366; */
+  color: rgba(32,16,48,0.82); /* rebeccapurple; /* #152255; */
 }
 
 .burgerWrapper a#burger #burgerIcon,
@@ -282,6 +283,7 @@ img.maxWidth {
   header {
     flex: 0 0 100%; /* 15%; */
     display: none;
+    background: white; /* lightgoldenrodyellow; /* lightpink; /* yellow; /* moccasin; */
   }
 
   #logo {
@@ -315,7 +317,8 @@ img.maxWidth {
     float: left;
     font-size: 32px;
     font-weight: 700;
-    color: #003366;
+    /* color: #003366; */
+    color: rgba(32,16,48,0.82); /* rebeccapurple; /* #152255; */
     z-index: 1000;
   }
   #logo a.text:hover {
@@ -334,7 +337,6 @@ img.maxWidth {
     font-size: 26px;
     line-height: 30px;
     font-weight: 700;
-    /* font-family: 'Roboto', sans-serif; */
     font-family: 'Rubik', sans-serif;
   }
 
@@ -436,8 +438,7 @@ img.maxWidth {
   .peopleEntry,
   .whyCodeEntry {
     padding: 0px 0.35em;
-    color: rgba(0,0,0,0.65);
-    /* color: darkslateblue; */
+    /* color: rgba(0,0,0,0.65); */
     /* flex is in media queries */
   }
   .resourceEntry span.thumb a,
