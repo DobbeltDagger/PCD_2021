@@ -15,25 +15,20 @@
         </a>
       {% endfor %}
     </div>
-  </div>
 
-  <!-- put in videos from PCD 2019 -->
-  <div class="maxWidth">
+    <!--
+    her er resource til video i VA-mediabox:
+    https://github.com/jirihybek/wa-mediabox
+    -->
+    <!-- video header -->
+    <!-- 
+    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+      <div class="Grid-cell">
+        <h2>Presentation videos</h2>
+      </div>
+    </div>
+    
     <div id='videoGalleryWrapper'>
-
-      <p>hey, video</p>
-
-      <!-- her er resource til video i VA-mediabox:
-      https://github.com/jirihybek/wa-mediabox
-      -->
-      <a href="https://www.youtube.com/embed/FA_8TY9Z5Zg?rel=0"
-        data-mediabox="my-gallery-name"
-        data-iframe="true"
-        data-width="853"
-        data-height="480"
-        data-title="Sample video in iframe">
-        <img src="image-thumb.jpg" alt="Image" />
-      </a>
 
       {% for thumb in collections.PCD2019videoGallery %}
         <a
@@ -49,6 +44,8 @@
         </a>
       {% endfor %}
     </div>
+    -->
+    
   </div>
 
 {% endblock postContent %}
