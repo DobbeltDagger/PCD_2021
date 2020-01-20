@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+
+{% block postContent %}
+
+  <div class='maxWidth'>
+    <div class="WhyCodeWrapper">
+      {% for coder in collections.PCD2020whyCode %}
+        <div class="whyCodeEntry">
+          <span class="name">{{ coder.data.name }}</span>
+          <span class="whyCode">{{ coder.data.reason }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div> <!-- eof maxwidth -->
+
+{% endblock postContent %}
+
+
+<!--
+<div class="WhyCodeWrapper">
+  <div class="whyCodeEntry">
+    <span class="name">Ester Marie Aagard</span>
+    <span class="whyCode">The software we use can influence our life in many ways, some we are aware of and some which are hidden. I want to understand the hidden parts as data-tracking, the way in which different software’s are programmed and so forth. And in my projects, I try to visualize the hidden parts to try to make people reflect upon them. Therefore, I use coding both to understand and explain the software that we use</span>
+  </div>
+</div>
+-->

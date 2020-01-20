@@ -174,7 +174,7 @@ a img {
 }
 
 .maxWidth {
-  max-width: 1024px;
+  max-width: 1280px; /* 1024px; */
   margin: 0px auto;
 }
 
@@ -445,7 +445,6 @@ img.maxWidth {
   .peopleEntry span.thumb a {
     width: 100%;
     height: auto;
-    margin-bottom: 0.5em;
     display: block;
     float: left;
   }
@@ -457,12 +456,23 @@ img.maxWidth {
     float: left;
     margin: 0px;
   }
+  /* people without links _*/
+  .resourceEntry span.thumb img,
+  .peopleEntry span.thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+    margin: 0px;
+    
+  }  
   .resourceEntry span.name,
   .peopleEntry span.name {
     display: block;
     width: 100%;
     float: left;
     font-weight: bold;
+    margin-top: 0.5em;
   }
   .resourceEntry span.desc,
   .peopleEntry span.desc {
@@ -547,13 +557,13 @@ img.maxWidth {
   }
 
   .resourceEntry {
-    flex: 0 0 50%; /* 33.3333%; /* 1; */
+    flex: 0 0 33.3333%; /* 50%; /* 33.3333%; /* 1; */
   }
   .peopleEntry {
-    flex: 0 0 50%; /* 33.3333%; /* 20%; /* 1; */
+    flex: 0 0 33.3333%; /* 50%; /* 33.3333%; /* 20%; /* 1; */
   }
   .whyCodeEntry {
-    flex: 0 0 100%; /* 50%; */
+    flex: 0 0 50%; /* 100%; /* 50%; */
   }
 }
 
@@ -703,11 +713,22 @@ img.maxWidth {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* 4. */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1600px) {
   
   #galleryWrapper a {
     flex: 0 0 20%;
   }
+
+  .resourceEntry {
+    flex: 0 0 25%;
+  }
+  .peopleEntry {
+    flex: 0 0 20%; /* 20%; /* 1; */
+  }
+  .whyCodeEntry {
+    flex: 0 0 33.3333%; /* 25%; */
+  }
+
 
 }
 

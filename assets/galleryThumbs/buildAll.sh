@@ -14,8 +14,8 @@ do
 
   # newline in string and then in file:
   # https://unix.stackexchange.com/questions/191694/how-to-put-a-newline-special-character-into-a-file-using-the-echo-command-and-re
-  title="title: 'This is the first image'"
-  desc="description: 'This is the description of the image'"
+  title="title: 'Processing Community Day @Aarhus 2019'"
+  desc="description: 'Processing Community Day @Aarhus 2019'"
   imgUrl="imageUrl: '/assets/galleryThumbs/large/${filename}.jpg'"
   thumbUrl="thumbUrl: '/assets/galleryThumbs/thumbs/${filename}_thumb.png'"
 
