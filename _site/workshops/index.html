@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="PCD @ Aarhus 2020 will address the notion of openness and sharing in software ecology, referring broadly to the open/free paradigm for social participation and engagement to create a sustainable community. With inspiration from the free/open-source software movement we want to promote the idea of having the freedom and rights to use, study, create, modify and share software regardless of age, gender, race and class.">
   <link rel="icon" href="/assets/images/favicon.png" sizes="128x128" type="image/png">
-  <title>Why code? | Processing Community Day @ Aarhus 2020</title>
+  <title>Workshops | Processing Community Day @ Aarhus 2020</title>
   <link href="/assets/css/grid.css" rel="stylesheet" />
-  <link href="/assets/css/style4.css" rel="stylesheet" />
+  <link href="/assets/css/style5.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="/assets/js/libs/wa-mediabox/wa-mediabox.css">
   <script type="text/javascript" src="/assets/js/libs/wa-mediabox/wa-mediabox.min.js"></script>
 </head>
@@ -40,17 +40,18 @@
     </a>
   </div>
   <div id="mobileNavWrapper" class='hide'>
-    <ul class="mobileNav"><li><a href="/program/">Program</a></li>
-<li class="active"><a href="/workshops/" class="activeAnchor">Workshops</a></li>
-<li><a href="/resources/">Resources</a></li>
-<li><a href="/about/">About</a></li>
-<li><a href="/whycode/">Why Code?</a></li>
-<li><a href="/archive/">Archive</a><ul><li><a href="/2019/2019_program/">Program</a></li>
-<li><a href="/2019/2019_resources/">Resources</a></li>
-<li><a href="/2019/2019_about/">About</a></li>
-<li><a href="/2019/2019_gallery/">Gallery</a></li>
-<li><a href="/2019/2019_whycode/">Why Code?</a></li>
-<li><a href="/2019/2019_opencall/">Open Call</a></li></ul></li></ul>
+    <ul class="mobileNav"><li class="listItem"><a href="/program/" class="anchor">Program</a></li>
+<li class="listItem active hasChildren"><a href="/workshops/" class="anchor activeAnchor">Workshops</a><ul><li class="listItem"><a href="/workshops/machineLearningWorkshop/" class="anchor">Machine Learning Workshop</a></li>
+<li class="listItem"><a href="/workshops/liveCodingSonicPiWorkshop/" class="anchor">Machine Learning Workshop</a></li></ul></li>
+<li class="listItem"><a href="/resources/" class="anchor">Resources</a></li>
+<li class="listItem"><a href="/about/" class="anchor">About</a></li>
+<li class="listItem"><a href="/whycode/" class="anchor">Why Code?</a></li>
+<li class="listItem hasChildren"><a href="/archive/" class="anchor">Archive</a><ul><li class="listItem"><a href="/2019/2019_program/" class="anchor">Program</a></li>
+<li class="listItem"><a href="/2019/2019_resources/" class="anchor">Resources</a></li>
+<li class="listItem"><a href="/2019/2019_about/" class="anchor">About</a></li>
+<li class="listItem"><a href="/2019/2019_gallery/" class="anchor">Gallery</a></li>
+<li class="listItem"><a href="/2019/2019_whycode/" class="anchor">Why Code?</a></li>
+<li class="listItem"><a href="/2019/2019_opencall/" class="anchor">Open Call</a></li></ul></li></ul>
 
     <!-- // It’s likely you want to pass in `eleventyNavigation.key` here, e.g.:
     // activeKey: eleventyNavigation.key
@@ -133,12 +134,28 @@
       </div>
     </div>
 
-    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
-      <div class="Grid-cell">
-        <p>To be announced...</p>
+    <div class='workshopWrapper'>
+      <!-- Frederik / La Cour -->
+      <div class="workshopEntry">
+        <span class="thumb">
+          <a href="liveCodingSonicPiWorkshop" title='Live Coding with Sonic Pi'>
+            <img src="/assets/2020_WorkshopThumbs/PIworkshop.jpg">
+          </a>
+        </span>
+        <span class="name">Live Coding with Sonic Pi&nbsp;&nbsp;(newcomers)</span>
+        <span class="desc">With Rolf Holm & Frederik la Cour. In this workshop, you will be introduced to live-coding as a performance practice, while being taught the basics of Live Coding. The workshop will be focusing on the Live Coding language Sonic Pi. No prior coding knowledge is required to attend. Bring your laptop, headphones/earbuds and your good spirits</span>
       </div>
-    </div>    
-
+      <!-- Korsgaard + Konrad -->
+      <div class="workshopEntry">
+        <span class="thumb">
+          <a href="machineLearningWorkshop" title='Machine Learning with P5.js'>
+            <img src="/assets/2020_WorkshopThumbs/MLworkshop.jpg">
+          </a>
+        </span>
+        <span class="name">Machine Learning with P5.js&nbsp;&nbsp;(intermediate)</span>
+        <span class="desc">With Lasse Korsgaard & Niels Konrad. In this hands on workshop we will introduce you to making your own fun machine learning models with and easily incorporating them into your P5.js projects</span>
+      </div>
+    </div>
   </div>
 
       <!-- for gallery content -->

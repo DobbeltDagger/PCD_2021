@@ -21,6 +21,9 @@ App.prototype = {
       document.getElementById('burgerIcon').classList.toggle('hide');
       document.getElementById('crossIcon').classList.toggle('hide');
     })
+
+    // find parent and make it active on menu
+    let 
     
   },
 

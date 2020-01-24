@@ -8,7 +8,7 @@
   <link rel="icon" href="/assets/images/favicon.png" sizes="128x128" type="image/png">
   <title>Frontpage | Processing Community Day @ Aarhus 2020</title>
   <link href="/assets/css/grid.css" rel="stylesheet" />
-  <link href="/assets/css/style4.css" rel="stylesheet" />
+  <link href="/assets/css/style5.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="/assets/js/libs/wa-mediabox/wa-mediabox.css">
   <script type="text/javascript" src="/assets/js/libs/wa-mediabox/wa-mediabox.min.js"></script>
 </head>
@@ -40,17 +40,18 @@
     </a>
   </div>
   <div id="mobileNavWrapper" class='hide'>
-    <ul class="mobileNav"><li><a href="/program/">Program</a></li>
-<li><a href="/workshops/">Workshops</a></li>
-<li><a href="/resources/">Resources</a></li>
-<li><a href="/about/">About</a></li>
-<li><a href="/whycode/">Why Code?</a></li>
-<li><a href="/archive/">Archive</a><ul><li><a href="/2019/2019_program/">Program</a></li>
-<li><a href="/2019/2019_resources/">Resources</a></li>
-<li><a href="/2019/2019_about/">About</a></li>
-<li><a href="/2019/2019_gallery/">Gallery</a></li>
-<li><a href="/2019/2019_whycode/">Why Code?</a></li>
-<li><a href="/2019/2019_opencall/">Open Call</a></li></ul></li></ul>
+    <ul class="mobileNav"><li class="listItem"><a href="/program/" class="anchor">Program</a></li>
+<li class="listItem hasChildren"><a href="/workshops/" class="anchor">Workshops</a><ul><li class="listItem"><a href="/workshops/machineLearningWorkshop/" class="anchor">Machine Learning Workshop</a></li>
+<li class="listItem"><a href="/workshops/liveCodingSonicPiWorkshop/" class="anchor">Machine Learning Workshop</a></li></ul></li>
+<li class="listItem"><a href="/resources/" class="anchor">Resources</a></li>
+<li class="listItem"><a href="/about/" class="anchor">About</a></li>
+<li class="listItem"><a href="/whycode/" class="anchor">Why Code?</a></li>
+<li class="listItem hasChildren"><a href="/archive/" class="anchor">Archive</a><ul><li class="listItem"><a href="/2019/2019_program/" class="anchor">Program</a></li>
+<li class="listItem"><a href="/2019/2019_resources/" class="anchor">Resources</a></li>
+<li class="listItem"><a href="/2019/2019_about/" class="anchor">About</a></li>
+<li class="listItem"><a href="/2019/2019_gallery/" class="anchor">Gallery</a></li>
+<li class="listItem"><a href="/2019/2019_whycode/" class="anchor">Why Code?</a></li>
+<li class="listItem"><a href="/2019/2019_opencall/" class="anchor">Open Call</a></li></ul></li></ul>
 
     <!-- // It’s likely you want to pass in `eleventyNavigation.key` here, e.g.:
     // activeKey: eleventyNavigation.key
@@ -127,6 +128,14 @@
       
   <div class="maxWidth">
 
+    <!-- image -->
+    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+      <div class="Grid-cell">
+        <img src='/assets/images/Dokk1.jpg' class='fitColumn'/>
+      </div>
+    </div>
+
+    <!-- new text -->
     <div class="Grid Grid--gutters Grid--full large-Grid--fit">
       <div class="Grid-cell">
         <h2>PCD @Aarhus 2020, Openness in software culture</h2>
@@ -134,20 +143,22 @@
     </div>
     <div class="Grid Grid--gutters Grid--full large-Grid--fit">
       <div class="Grid-cell">
+        <p>Processing Community Day (PCD) is a worldwide event initiated by The Processing Foundation, involving more than 30 international cities to organize a day event with their local communities to celebrating and exploring art, code, and diversity.</p>
         <p>Following last year PCD @ Aarhus with the theme to exploring code and coding practice beyond functional applications development, this year we want to keep exposing the diverse mode of working and thinking with/through software. In particular, PCD @ Aarhus 2020 will address the notion of openness and sharing in software ecology, referring broadly to the open/free paradigm for social participation and engagement to create a sustainable community.</p>
       </div>
-      <div class='Grid-cell'>
+      <div class="Grid-cell">
         <p>Pointing to the ambition of creating an open and sustainable community in Aarhus, our inspiration draws from the free/open-source software movement with which to promote the idea of having the freedom and rights to use, study, create, modify and share software regardless of age, gender, race and class.</p>
-      </div>
-      <div class='Grid-cell'>
         <p>Following this line of thinking, this year we have chosen to contribute to the public community by putting together workshops and talks from diverse practitioners whose share different ways of working with and thinking through software artistically and culturally, opening up our understanding of, and approach to, the software beyond the realms of science and engineering.</p>
       </div>
     </div>
+
+    <!-- google map -->
     <div class="Grid Grid--gutters Grid--full large-Grid--fit">
       <div class="Grid-cell">
-        <img src='/assets/images/Dokk1.jpg' class='fitColumn'/>
+        <iframe id="gmap" src="https://www.google.com/maps/d/embed?mid=1NAJIxDO4Oov9sqrINPlkPL_4y3DZ7fb-" frameborder="0" style="border: 1px solid rgba(0,0,0,0.1)" width="640" height="500"></iframe>
       </div>
     </div>
+
   </div>
 
       <!-- for gallery content -->
