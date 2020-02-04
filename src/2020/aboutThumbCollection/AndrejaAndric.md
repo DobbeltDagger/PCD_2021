@@ -1,5 +1,6 @@
 ---
 name: 'Andreja Andric'
+sortName: 'Andric'
 description: 'Andreja Andric is a Serbian composer and programmer, living in Aarhus. Using computer programming as key means of artistic expression, he aims at discovering pristine, dynamic and complex sound worlds. Pioneer of smartphone recital as a concert practice. Holds a PhD in Music Informatics from Milan University, Italy'
 url: 'http://andrejaandric.altervista.org/'
 thumbUrl: '/assets/2020_AboutThumbs/AndrejaAndric.jpg'

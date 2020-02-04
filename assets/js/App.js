@@ -23,7 +23,7 @@ App.prototype = {
     })
 
     // find parent and make it active on menu
-    let 
+    // let 
     
   },
 

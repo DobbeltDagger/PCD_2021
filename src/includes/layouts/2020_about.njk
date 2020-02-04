@@ -11,7 +11,7 @@
     </div>
 
     <div class="peopleWrapper">
-      {% for thumb in collections.PCD2020about %}
+      {% for thumb in collections.aboutAscending | reverse() %}
         <div class="peopleEntry">
           <span class="thumb">
 
@@ -23,7 +23,6 @@
               </a>
             {% endif %}
 
-            
           </span>
           <span class="name">{{ thumb.data.name }}</span>
           <span class="desc">{{ thumb.data.description }}</span>

@@ -244,14 +244,14 @@ img.maxWidth {
 .programEntry {
   width: 100%;
   padding: 0.4em 0px; /* 0.5em 0px; */
-  border-bottom: 1px solid rgba(255,255,255,0.1); /*  1px solid rgba(32, 27, 63, 0.1); */
+  border-bottom: 1px solid rgba(121, 94, 94, 0.1); /*  1px solid rgba(32, 27, 63, 0.1); */
 }
 
 .programEntry span.timeWrapper {
   display: inline-block;
   padding-right: 1em;
   min-width: 120px;
-  opacity: 0.75;
+  opacity: 0.82; /* 0.75; */
 }
 
 .programEntry span.infoWrapper {
@@ -260,7 +260,6 @@ img.maxWidth {
 
 .programEntry span.title {
   font-style: italic;
-  /* background: rgba(255, 127, 0, 0.25); */
   padding: 2px 0px; /* 2px 3px; */
   /* background: rgba(0,0,0,0.1); */
 }
