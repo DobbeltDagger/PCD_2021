@@ -687,7 +687,7 @@ img.maxWidth {
   }
   ul.mobileNav li {
     display: block; /* inline-block; */
-    width: 100%; /* auto; */
+    width: 13vw; /* 100%; /* auto; */
     float: left; /* none; */
   }
   ul.mobileNav li:first-child {
@@ -697,7 +697,7 @@ img.maxWidth {
     display: block;
     float: left;
     width: auto;
-    padding: 0px 0.9em 0px 0px;
+    padding: 0px 0.25em 0px 0px; /* 0px 0.9em 0px 0px; */
     text-align: left;
     border-bottom: 0px;
     border-top: 0px;
