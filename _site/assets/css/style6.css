@@ -217,7 +217,8 @@ img.maxWidth {
 
 /* Gallery wrapper ******************************* */
 
-#galleryWrapper {
+#galleryWrapper,
+#videoGalleryWrapper {
   display: block;
   width: auto;
   display: flex;
@@ -228,11 +229,13 @@ img.maxWidth {
   margin: 0 -0.25em 1.5em -0.25em;
 }
 
-#galleryWrapper a {
+#galleryWrapper a,
+#videoGalleryWrapper a {
   padding: 0px 0.25em 0.5em 0.25em;
 }
 
-#galleryWrapper a img {
+#galleryWrapper a img,
+#videoGalleryWrapper a img {
   width: 100%;
   height: auto;
   display: block;
@@ -432,7 +435,8 @@ img.maxWidth {
 
   /* other wrappers */
 
-  #galleryWrapper a {
+  #galleryWrapper a,
+  #videoGalleryWrapper a {
     flex: 0 0 100%;
   }
 
@@ -564,7 +568,8 @@ img.maxWidth {
 
 @media (min-width: 400px) {
   
-  #galleryWrapper a {
+  #galleryWrapper a,
+  #videoGalleryWrapper a {
     flex: 0 0 50%;
   }
 
@@ -587,7 +592,8 @@ img.maxWidth {
 
 @media (min-width: 800px) {
   
-  #galleryWrapper a {
+  #galleryWrapper a,
+  #videoGalleryWrapper a {
     flex: 0 0 33.3333%;
   }
   .resourceEntry {
@@ -707,7 +713,8 @@ img.maxWidth {
   }
 
   /* other wrappers */
-  #galleryWrapper a {
+  #galleryWrapper a,
+  #videoGalleryWrapper a {
     flex: 0 0 25%;
   }
 
@@ -750,7 +757,8 @@ img.maxWidth {
 /* 4. */
 @media screen and (min-width: 1600px) {
   
-  #galleryWrapper a {
+  #galleryWrapper a,
+  #videoGalleryWrapper a {
     flex: 0 0 20%;
   }
 
