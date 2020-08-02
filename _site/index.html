@@ -96,6 +96,13 @@
       
   <div class="maxWidth">
 
+    <!-- video -->
+    <!-- <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+      <div class="Grid-cell">
+        <iframe width="560" height="315" class='vid' src="https://www.youtube.com/embed/P-m_ndQ8D9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div> -->
+
     <!-- image -->
     <div class="Grid Grid--gutters Grid--full large-Grid--fit">
       <div class="Grid-cell">
@@ -142,6 +149,7 @@
     document.addEventListener("DOMContentLoaded", (e) => { 
       let app = new App();
       app.init();
+      app.fitvids(document.querySelectorAll('.vid')); // fit all vids
     });
   </script>
 </body>

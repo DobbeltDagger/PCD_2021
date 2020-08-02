@@ -113,24 +113,6 @@
         <a
           data-mediabox="PCD2020gallery"
           data-title="Processing Community Day @Aarhus 2020"
-          href='/assets/2020_GalleryThumbs/large/PCD-1209.jpg'
-          title='Processing Community Day @Aarhus 2019'
-          alt='Processing Community Day @Aarhus 2019'>
-          <img src='/assets/2020_GalleryThumbs/thumbs/PCD-1209_thumb.png' class='maxWidth' alt='Processing Community Day @Aarhus 2019' title='Processing Community Day @Aarhus 2019' />
-        </a>
-      
-        <a
-          data-mediabox="PCD2020gallery"
-          data-title="Processing Community Day @Aarhus 2020"
-          href='/assets/2020_GalleryThumbs/large/PCD-1211.jpg'
-          title='Processing Community Day @Aarhus 2019'
-          alt='Processing Community Day @Aarhus 2019'>
-          <img src='/assets/2020_GalleryThumbs/thumbs/PCD-1211_thumb.png' class='maxWidth' alt='Processing Community Day @Aarhus 2019' title='Processing Community Day @Aarhus 2019' />
-        </a>
-      
-        <a
-          data-mediabox="PCD2020gallery"
-          data-title="Processing Community Day @Aarhus 2020"
           href='/assets/2020_GalleryThumbs/large/PCD-1215.jpg'
           title='Processing Community Day @Aarhus 2019'
           alt='Processing Community Day @Aarhus 2019'>
@@ -140,37 +122,10 @@
         <a
           data-mediabox="PCD2020gallery"
           data-title="Processing Community Day @Aarhus 2020"
-          href='/assets/2020_GalleryThumbs/large/PCD-1222.jpg'
-          title='Processing Community Day @Aarhus 2019'
-          alt='Processing Community Day @Aarhus 2019'>
-          <img src='/assets/2020_GalleryThumbs/thumbs/PCD-1222_thumb.png' class='maxWidth' alt='Processing Community Day @Aarhus 2019' title='Processing Community Day @Aarhus 2019' />
-        </a>
-      
-        <a
-          data-mediabox="PCD2020gallery"
-          data-title="Processing Community Day @Aarhus 2020"
           href='/assets/2020_GalleryThumbs/large/PCD-1224.jpg'
           title='Processing Community Day @Aarhus 2019'
           alt='Processing Community Day @Aarhus 2019'>
           <img src='/assets/2020_GalleryThumbs/thumbs/PCD-1224_thumb.png' class='maxWidth' alt='Processing Community Day @Aarhus 2019' title='Processing Community Day @Aarhus 2019' />
-        </a>
-      
-        <a
-          data-mediabox="PCD2020gallery"
-          data-title="Processing Community Day @Aarhus 2020"
-          href='/assets/2020_GalleryThumbs/large/PCD-1227.jpg'
-          title='Processing Community Day @Aarhus 2019'
-          alt='Processing Community Day @Aarhus 2019'>
-          <img src='/assets/2020_GalleryThumbs/thumbs/PCD-1227_thumb.png' class='maxWidth' alt='Processing Community Day @Aarhus 2019' title='Processing Community Day @Aarhus 2019' />
-        </a>
-      
-        <a
-          data-mediabox="PCD2020gallery"
-          data-title="Processing Community Day @Aarhus 2020"
-          href='/assets/2020_GalleryThumbs/large/PCD-1228.jpg'
-          title='Processing Community Day @Aarhus 2019'
-          alt='Processing Community Day @Aarhus 2019'>
-          <img src='/assets/2020_GalleryThumbs/thumbs/PCD-1228_thumb.png' class='maxWidth' alt='Processing Community Day @Aarhus 2019' title='Processing Community Day @Aarhus 2019' />
         </a>
       
         <a
@@ -198,15 +153,6 @@
           title='Processing Community Day @Aarhus 2019'
           alt='Processing Community Day @Aarhus 2019'>
           <img src='/assets/2020_GalleryThumbs/thumbs/PCD-1237_thumb.png' class='maxWidth' alt='Processing Community Day @Aarhus 2019' title='Processing Community Day @Aarhus 2019' />
-        </a>
-      
-        <a
-          data-mediabox="PCD2020gallery"
-          data-title="Processing Community Day @Aarhus 2020"
-          href='/assets/2020_GalleryThumbs/large/PCD-1238.jpg'
-          title='Processing Community Day @Aarhus 2019'
-          alt='Processing Community Day @Aarhus 2019'>
-          <img src='/assets/2020_GalleryThumbs/thumbs/PCD-1238_thumb.png' class='maxWidth' alt='Processing Community Day @Aarhus 2019' title='Processing Community Day @Aarhus 2019' />
         </a>
       
         <a
@@ -509,6 +455,7 @@
     document.addEventListener("DOMContentLoaded", (e) => { 
       let app = new App();
       app.init();
+      app.fitvids(document.querySelectorAll('.vid')); // fit all vids
     });
   </script>
 </body>
