@@ -11,6 +11,19 @@
       </div>
     </a>
   </div>
+  {% set navPages = collections.all | eleventyNavigation("Archive 2020") %}
+  <div id="mobileNavWrapper" class='hide'>
+    <ul class="mobileNav">
+    {%- for entry in navPages %}
+      <li {% if entry.url == page.url %} class="active"{% endif %}>
+        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+      </li>
+    {%- endfor %}
+    </ul>
+  </div>
+
+
+  <!--
   <div id="mobileNavWrapper" class='hide'>
     {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
       listElement: "ul",
@@ -24,27 +37,6 @@
       activeKey: eleventyNavigation.key,
       showExcerpt: false
     }) | safe }}
-
-    <!-- // It’s likely you want to pass in `eleventyNavigation.key` here, e.g.:
-    // activeKey: eleventyNavigation.key
-    // YES, THIS IS VERY IMPORTANT!!! -->
-
-    <!-- from here: https://www.11ty.dev/docs/plugins/navigation/#template-compatibility -->
-    <!-- {% set navPages = collections.all | eleventyNavigation %}
-    <ul>
-    {%- for entry in navPages %}
-      <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
-        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-      </li>
-    {%- endfor %}
-    </ul>
-    -->
-
-    <!-- <ul class="hide" id="mobileNav">
-      <li class='frontLink'><a href='/'>/*.*</a></li>
-      {% for item in menuItems %}
-        <li><a href='{{ item.url }}' {% if item.url in page.url %} class="active"{% endif %}>{{ item.title }}</a></li>
-      {% endfor %}
-    </ul> -->    
+  -->  
   </div>
 </div>
