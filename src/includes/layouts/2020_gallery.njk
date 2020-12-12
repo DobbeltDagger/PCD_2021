@@ -1,0 +1,45 @@
+{% extends "2020_base.njk" %}
+
+{% block postContent %}
+
+  <div class='maxWidth'>
+    <div id='galleryWrapper'>
+      {% for thumb in collections.PCD2020gallery %}
+        <a
+          data-mediabox="PCD2020gallery"
+          data-title="Processing Community Day @Aarhus 2020"
+          href='{{ thumb.data.imageUrl }}'
+          title='{{ thumb.data.title }}'
+          alt='{{ thumb.data.title }}'>
+          <img src='{{ thumb.data.thumbUrl }}' class='maxWidth' alt='{{ thumb.data.title }}' title='{{ thumb.data.title }}' />
+        </a>
+      {% endfor %}
+    </div>
+
+    <!-- videos -->
+    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+      <div class="Grid-cell">
+        <h2>Presentation videos</h2>
+      </div>
+    </div>
+    
+    <div id='videoGalleryWrapper'>
+
+      {% for thumb in collections.PCD2020videoGallery %}
+        <a
+          href='{{ thumb.data.youtubeUrl }}'
+          data-mediabox="PCD2020videoGallery"
+          data-iframe="true"
+          data-title="Processing Community Day @Aarhus 2020"
+          data-width="1600"
+          data-height="900"
+          data-title='{{ thumb.data.title }}'
+          data-alt='{{ thumb.data.title }}'>
+          <img src='{{ thumb.data.thumbUrl }}' class='maxWidth' alt='{{ thumb.data.title }}' title='{{ thumb.data.title }}' />
+        </a>
+      {% endfor %}
+    </div>
+
+  </div>
+
+{% endblock postContent %}

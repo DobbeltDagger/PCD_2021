@@ -84,7 +84,7 @@ html {
 
 body {
   width: 100%;
-  background:rebeccapurple; /* whitesmoke; /* #FCFCFC; */
+  background:darkred; /* rebeccapurple; /* whitesmoke; /* #FCFCFC; */
   color: rgba(32,16,48,0.82); /* rebeccapurple; /* #152255; */
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
@@ -361,7 +361,7 @@ img.maxWidth {
   #mainWrapper {
     flex: 0 0 100%; 
     padding: 1.5em 1em 0px 1em; /* 0px 0.65em; */
-    background: rebeccapurple;
+    background: darkred; /* rebeccapurple; */
     color: rgba(255,255,255,0.9);
   }
   #mainWrapper a {
