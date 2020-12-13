@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* BASIC CONSCIOUS RESETs +++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -84,8 +83,8 @@ html {
 
 body {
   width: 100%;
-  background:rebeccapurple; /* whitesmoke; /* #FCFCFC; */
-  color: rgba(32,16,48,0.82); /* rebeccapurple; /* #152255; */
+  background:rebeccapurple;
+  color: rgba(32,16,48,0.82);
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
   line-height: 1.4em;
