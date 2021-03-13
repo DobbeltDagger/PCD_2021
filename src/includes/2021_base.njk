@@ -8,7 +8,7 @@
   <link rel="icon" href="/assets/images/favicon.png" sizes="128x128" type="image/png">
   <title>{{ title }} | Processing Community Day @ Aarhus 2021</title>
   <link href="/assets/css/grid.css" rel="stylesheet" />
-  <link href="/assets/css/style6.css" rel="stylesheet" />
+  <link href="/assets/css/2021_style.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="/assets/js/libs/wa-mediabox/wa-mediabox.css">
   <script type="text/javascript" src="/assets/js/libs/wa-mediabox/wa-mediabox.min.js"></script>
 </head>
@@ -26,9 +26,10 @@
       </div>
     </header>
 
-    {% include "2021_menu.html" %}
-
     <div id="mainWrapper">
+
+      {% include "2021_menu.html" %}
+
       {{ content | safe }}
 
       <!-- for gallery content -->
