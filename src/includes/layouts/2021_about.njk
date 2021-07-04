@@ -6,64 +6,56 @@
 
     <div class="Grid Grid--gutters Grid--full large-Grid--fit">
       <div class="Grid-cell">
+        
         <h2>People</h2>
-      </div>
-    </div>
 
-    <div class="peopleWrapper">
-      {% for thumb in collections.aboutAscending2021 | reverse() %}
-        <div class="peopleEntry">
-          <span class="thumb">
+        <div class="peopleWrapper">
+          {% for thumb in collections.aboutAscending2021 | reverse() %}
+            <div class="peopleEntry">
+              <span class="thumb">
 
-            {% if "#" in thumb.data.url %}
-              <img src='{{ thumb.data.thumbUrl }}' title='{{ thumb.data.name }}'>
-            {% else %}
-              <a target="_blank" href='{{ thumb.data.url }}' title='{{ thumb.data.name }}'>
-                <img src='{{ thumb.data.thumbUrl }}'>
-              </a>
-            {% endif %}
+                {% if "#" in thumb.data.url %}
+                  <img src='{{ thumb.data.thumbUrl }}' title='{{ thumb.data.name }}'>
+                {% else %}
+                  <a target="_blank" href='{{ thumb.data.url }}' title='{{ thumb.data.name }}'>
+                    <img src='{{ thumb.data.thumbUrl }}'>
+                  </a>
+                {% endif %}
 
-          </span>
-          <span class="name">{{ thumb.data.name }}</span>
-          <span class="desc">{{ thumb.data.description }}</span>
-          {% if "#" in thumb.data.url %}
-          {% else %}
-            <span>
-              <a target="_blank" href='{{ thumb.data.url }}'>{{ thumb.data.url }}</a>
-            </span>
-          {% endif %}
+              </span>
+              <span class="name">{{ thumb.data.name }}</span>
+              <span class="desc">{{ thumb.data.description }}</span>
+              {% if "#" in thumb.data.url %}
+              {% else %}
+                <span>
+                  <a target="_blank" href='{{ thumb.data.url }}'>{{ thumb.data.url }}</a>
+                </span>
+              {% endif %}
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
+
+      </div>
     </div>
 
 
     <!-- Code&Share text -->
     <div class="Grid Grid--gutters Grid--full large-Grid--fit">
       <div class="Grid-cell">
-        <h2>Code&Share[&nbsp;&nbsp;] Community</h2>
-      </div>
-    </div>
-    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
-      <div class="Grid-cell">
+        <h2>Code&Share[&nbsp;&nbsp;]</h2>
         <p>
-          Processing Community Day (PCD) is a day to celebrate art, code and diversity held in communities worldwide. Code&Share[&nbsp;&nbsp;] is a community that is born out of PCD @ Aarhus since 2019.<br/>We are a group of software artists, coders, designers and students at Aarhus interested in exploring code and software development beyond its functional aspects. Alongside Processing Community Day, we hold monthly meetups where we make workshops, coding sessions and share our projects with hygge and cake.
+          Processing Community Day (PCD) is a day to celebrate art, code and diversity held in communities worldwide. Code&Share[&nbsp;&nbsp;] is a community that was born out of PCD @Aarhus 2019.
+        </p>
+        <p>We are a group of software artists, coders, designers and students at Aarhus interested in exploring code and software development beyond its functional aspects. Alongside Processing Community Day, we hold monthly meetups where we make workshops, coding sessions and share our projects with hygge and cake.
         </p>
         <p>
           If this sounds interesting to you or someone you know, find us at <a href='https://www.facebook.com/codeAndShareAarhus' target='_blank'>facebook</a> and our <a href='https://codeandshare.net' target='_blank'>website</a>. You are welcome to join us for our next meet up.      
         </p>
       </div>
-    </div>
-
-    <!-- partners -->
-    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+      <!-- cell right -->
       <div class="Grid-cell">
-        <h2>Partners</h2>
-      </div>
-    </div>
-    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
-      <div class="Grid-cell">
-        <p>The event is supported by:<br>
-
+        <h2>PCD Partners</h2>
+        <p>Processing Community Day @Aarhus is supported by:<br>
           <a target="_blank" href="http://cc.au.dk/en/about-the-school/departments/digital-design-and-information-studies/">Department of Digital Design and Information Studies, Aarhus University</a><br>
           <a target="_blank" href='https://ddlab.au.dk/'>DD Lab, Aarhus University</a><br>
           <a target="_blank" href="https://dokk1.dk">DOKK1, Aarhus Public Library</a><br>
