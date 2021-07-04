@@ -116,14 +116,14 @@ ul li {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora';
   font-weight: 600;
-  line-height: 1.2em;
+  line-height: 1.15em;
   margin: 0px 0px 0em 0px;
   letter-spacing: 0.025em;
 }
 h2 {
   font-size: 2.5em; /* 1.5em; */
   padding: 0px;
-  margin-bottom: 0.35em;
+  margin-bottom: 0.475em; /* 0.375em; */
 }
 h3 {
   font-size: 1.25em;
@@ -159,13 +159,35 @@ a img {
   margin-bottom: 0px; /* 0.5em; */
 }
 
+
+/* ************************************************************************** */
+/* HERO Wrapper */
+
+.heroWrapper {
+  display: block;
+  width: auto;
+  min-height: 40vh;
+  /* margin: 0px -2rem 3rem -2rem; */
+  background-color: var(--main-bg-color);
+  background-image: url(../2021_bgImages/DOMEN.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.heroWrapper::after {
+  content: "";
+  display: table;
+  clear: both;  
+}
+
+
 /* ************************************************************************** */
 /* Other Wrappers */
 
 
 #menuWrapper {
   display: block;
-  float: left; /* super important here! */
+  /* float: left; /* super important here! */
   width: 100%;
   color: white;
   font-family: sans-serif;
@@ -294,6 +316,10 @@ img.maxWidth {
     justify-content: flex-start;
     align-items: stretch;
   }
+
+  .heroWrapper {
+    margin: 0px -1rem 2rem -1rem;
+  }  
 
   header {
     flex: 0 0 100%; /* 15%; */
@@ -437,13 +463,12 @@ img.maxWidth {
   /* mobileNav */
   ul.mobileNav {
     list-style: none;
-    margin-bottom: 1.5rem; /* 0px; /* 5rem; /* 0px; */
+    margin-bottom: 1.5rem;
     flex: 0 0 100%;
     height: auto;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     overflow: hidden;
     text-align: center;
-    font-family: 'Roboto';
   }
   ul.mobileNav::after {
     content: "";
@@ -463,11 +488,12 @@ img.maxWidth {
     display: block;
     float: left;
     width: 100%;
-    color: rgba(255,255,255,0.70);
+    /* color: rgba(255,255,255,0.70); */
+    color: var(--main-text-color);
     line-height: 2em;
-    font-size: 1.3125rem;
+    font-size: 1.25rem ;/* 1.3125rem; */
     padding: 0px 0.65rem;
-    font-weight: 500;
+    font-weight: 300; /*  500; */
     letter-spacing: 0.030em; /* 0.00375em; */
     border-top: 1px solid rgba(255,255,255,0.1);
   }
@@ -672,6 +698,10 @@ img.maxWidth {
     align-items: stretch;
   }
 
+  .heroWrapper {
+    margin: 0px -2rem 3rem -2rem;
+  }  
+
   /* no mobile nav */
   .burgerWrapper a#burger #burgerIcon,
   .burgerWrapper a#burger #crossIcon {
@@ -731,11 +761,10 @@ img.maxWidth {
   }
   #mainWrapper ul.mobileNav li a {
     color: rgba(255,255,255,0.70);
-    font-size: 1.3125rem;
+    font-size: 1.25rem; /* 1.3125rem; */
     line-height: normal;
     padding: 0px 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.030em; /* 0.00375em; */
+    letter-spacing: 0.0375em; /* 0.00375em; */
     border-top: 0px solid transparent;
   }
   #mainWrapper ul.mobileNav li a:hover {
