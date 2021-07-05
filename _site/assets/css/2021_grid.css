@@ -12,6 +12,12 @@
   flex: 1;
 }
 
+/* last p in every grid cell is close to padding */
+.Grid-cell p:last-of-type {
+  /* border: 1px solid pink; */
+  margin-bottom: 0.35em;
+}
+
 .Grid--flexCells > .Grid-cell {
   display: flex;
 }
