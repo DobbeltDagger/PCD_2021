@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root {
-  --main-text-color: rgba(255,255,255,0.9);
+  --main-text-color: rgba(255,255,255,0.86);
   --main-bg-color: #110a14;
 }
 
@@ -126,8 +126,11 @@ h2 {
   margin-bottom: 0.475em; /* 0.375em; */
 }
 h3 {
-  font-size: 1.25em;
+  font-size: 1.375em;
   padding: 0px;
+}
+h3.thin {
+  font-weight: 300;
 }
 
 p {
@@ -160,25 +163,6 @@ a img {
 }
 
 
-/* ************************************************************************** */
-/* HERO Wrapper */
-
-.heroWrapper {
-  display: block;
-  width: auto;
-  min-height: 40vh;
-  /* margin: 0px -2rem 3rem -2rem; */
-  background-color: var(--main-bg-color);
-  background-image: url(../2021_bgImages/DOMEN.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.heroWrapper::after {
-  content: "";
-  display: table;
-  clear: both;  
-}
 
 
 /* ************************************************************************** */
@@ -317,14 +301,32 @@ img.maxWidth {
     align-items: stretch;
   }
 
+
+  /* HERO Wrapper */
   .heroWrapper {
-    margin: 0px -1rem 2rem -1rem;
-  }  
+    display: block;
+    width: auto;
+    min-height: 50vh; /* 45vh; /* 40vh; */
+    /* margin: 0px -2rem 3rem -2rem; */
+    background-color: var(--main-bg-color);
+    background-image: url(../2021_bgImages/DOMEN.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px 0px 3rem 0px;
+    border-radius: 47%;
+    transform: rotate(-2deg);
+  }
+  .heroWrapper::after {
+    content: "";
+    display: table;
+    clear: both;  
+  }
 
   header {
     flex: 0 0 100%; /* 15%; */
     display: none;
-    background: white; /* lightgoldenrodyellow; /* lightpink; /* yellow; /* moccasin; */
+    background-color: white; /* whitesmoke; /* white; */
   }
 
   #logo {
@@ -699,7 +701,8 @@ img.maxWidth {
   }
 
   .heroWrapper {
-    margin: 0px -2rem 3rem -2rem;
+    /* margin: 0px -2rem 3rem -2rem; */
+    margin: 0px -0.5rem 2.5rem -0.5rem;
   }  
 
   /* no mobile nav */
@@ -736,7 +739,7 @@ img.maxWidth {
 
   #mainWrapper {
     flex: 0 0 80%;
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 2.375rem 2rem 1rem 2rem;
     /* padding-top: 2rem; /* 1em; /* 3em; /* 0px; */
     /* padding-bottom: 0px; */
   }
