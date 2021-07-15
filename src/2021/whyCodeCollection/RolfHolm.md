@@ -1,0 +1,7 @@
+---
+name: 'Rolf Holm (2020)'
+sortName: 'Holm'
+reason: 'Personally for me, coding is fun. Someone once called it, "the greatest puzzle", and I get why. It’s the most open-ended game there is, with no end goal beyond creativity and mastery. And beyond that I find it deeply intriguing, when the unexpected happens, be that breakdowns or the emergence of "features". It’s about exploration, and finding your own niche'
+tags: 'PCD2021whyCode'
+date: 1953-01-03
+---
