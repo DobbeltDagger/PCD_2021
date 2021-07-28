@@ -19,7 +19,8 @@ button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: ba
 button, input { line-height: normal; *overflow: visible; }
 
 /* Basic List styling */
-ul, ol { margin: 0 0 1.5385em 0; padding: 0 0 0 0; /* 1em; /* 1.25em; */ }
+ul { margin: 0 0 1.5385em 0; padding: 0 0 0 0; }
+/* ul, ol { margin: 0 0 1.5385em 0; padding: 0 0 0 0; } */
 dd { margin: 0 0 0 3em; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
 li { line-height: 1.5385em; } /* 20 */
@@ -110,6 +111,39 @@ ul {
 ul li {
   margin: 0px;
 }
+
+.Grid-cell ol {
+  margin: 0px 0px 1.5385em 0.25rem; /* 0 0 1.5385em 1rem; */
+  padding: 0px 0px 0px 1rem;
+  list-style-position: outside;
+}
+.Grid-cell ol li {
+  /* border: 1px solid red; */
+  padding-left: 0.5rem;
+}
+.Grid-cell ul ol {
+  margin: 0px; /* 0 0 0px 1rem !important; */
+  list-style-type: circle;
+}
+.Grid-cell ul ol li {
+  /* border: 1px solid red; */
+}
+
+.Grid-cell ul {
+  margin: 0px 0px 1.5385em 0.25rem; /* 0 0 1.5385em 1rem; */
+  padding: 0px 0px 0px 1rem;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+.Grid-cell ul li {
+  /* border: 1px solid red; */
+  padding-left: 0.5rem;
+}
+.Grid-cell ul ul {
+  margin: 0 0 0px 1rem !important;
+  list-style-type: circle;
+}
+
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* TYPE STUFF */
