@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 :root {
-  --main-text-color: rgba(255,255,255,0.86);
-  --main-bg-color: #110a14;
+  --main-text-color: rgba(0,0,0,0.86);
+  --main-link-color: magenta;
+  --main-bg-color: white;
 }
 
 
@@ -92,9 +93,9 @@ html {
 body {
   width: 100%;
   background-color: var(--main-bg-color);
-  color: rgba(32,16,48,0.82);
+  color: var(--main-text-color); /* rgba(32,16,48,0.82); */
   font-family: 'Rubik', sans-serif;
-  font-weight: 300;
+  font-weight: 400; /* 300; */
   font-size: 18px;
   line-height: 1.4em;
   margin: 0px;
@@ -186,7 +187,7 @@ strong {
 /* INLINE LINKS */
 a {
   text-decoration: none;
-  color: lightgreen; /* tomato; */
+  color: var(--main-link-color);
   outline: 0;
 }
 a:active, a:focus { outline: 0; }
@@ -204,13 +205,15 @@ a img {
 
 
 
+
 /* ************************************************************************** */
 /* Other Wrappers */
 
 
 
-/* menu */
 
+
+/* menu */
 #menuWrapper {
   display: block;
   /* float: left; /* super important here! */
@@ -298,7 +301,7 @@ img.maxWidth {
 .programEntry {
   width: 100%;
   padding: 0.4em 0px; /* 0.5em 0px; */
-  border-bottom: 1px solid rgba(255,255,255,0.075); /* rgba(121, 94, 94, 0.1); /*  1px solid rgba(32, 27, 63, 0.1); */
+  border-bottom: 1px solid rgba(121, 94, 94, 0.1); /*  1px solid rgba(32, 27, 63, 0.1); */
 }
 
 .programEntry span.timeWrapper {
@@ -352,21 +355,22 @@ img.maxWidth {
     width: 8rem; /* 9rem; */
     height: 8rem; /* 9rem; */
     top: auto; /* 40px; */
-    bottom: 0px; /* auto */
     right: 0px;
+    bottom: 0px; /* auto */
     overflow: hidden;
   }
 
   #podcastBtn a {
     position: absolute;
+    display: block;
     top: auto; /* 0px; */
     bottom: -3px; /* auto */
     right: -3px;
-    display: block;
+    display: block;  
     width: 8rem; /* 9rem; */
     height: 8rem; /* 9rem; */
     border-radius: 50%;
-    background-color: green;
+    background-color: magenta;
     background-image: url(../2021_bgImages/podcastOpenCall2.png);
     background-position: center;
     background-size: cover;
@@ -468,7 +472,6 @@ img.maxWidth {
     font-size: 26px;
     line-height: 30px;
     font-weight: 900; /* 700; */
-    /* font-family: 'Rubik', sans-serif; */
     font-family: 'Lora', serif;
   }
 
@@ -476,15 +479,14 @@ img.maxWidth {
     flex: 0 0 100%; 
     padding: 0.65rem 0.65rem 7rem 0.65rem; /* 1rem; */
     background-color: var(--main-bg-color);
-    /* background-image: url(../2021_bgImages/BgTiled.png); */
-    background-image: url(../2021_bgImages/greenBg2.jpg);
+    background-image: url(../2021_bgImages/pinkBg2.jpg);
     background-position: top left;
     background-repeat: repeat;
     min-height: 100vh;
-    color: rgba(255,255,255,0.9);
   }
   #mainWrapper a {
-    color: lightgreen; /* tomato; */
+    color: var(--main-link-color);
+    font-weight: 500;
   }
 
   #menuWrapper {
@@ -580,7 +582,6 @@ img.maxWidth {
     display: block;
     float: left;
     width: 100%;
-    /* color: rgba(255,255,255,0.70); */
     color: var(--main-text-color);
     line-height: 2em;
     font-size: 1.25rem ;/* 1.3125rem; */
@@ -792,7 +793,6 @@ img.maxWidth {
     align-items: stretch;
   }
 
-  /* PODCAST bubble to click */
   #podcastBtn {
     width: 9rem; /* 8rem; /* 9rem; */
     height: 9rem; /* 8rem; /* 9rem; */
@@ -805,9 +805,9 @@ img.maxWidth {
     bottom: auto; /* -3px; /* auto */
     width: 9rem; /* 8rem; /* 9rem; */
     height: 9rem; /* 8rem; /* 9rem; */
-  }  
-
-
+  }
+  
+  
   .heroWrapper {
     /* margin: 0px -2rem 3rem -2rem; */
     margin: 0px -0.5rem 2.5rem -0.5rem;
@@ -862,7 +862,7 @@ img.maxWidth {
     margin-bottom: 5rem; /* 0px; */
     flex: 0 0 100%;
     height: auto;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid transparent; /* rgba(0,0,0,0.1); */
     text-align: center;
   }
   /* only first levels li */
@@ -875,7 +875,6 @@ img.maxWidth {
     float: none;
   }
   #mainWrapper ul.mobileNav li a {
-    color: rgba(255,255,255,0.70);
     font-size: 1.25rem; /* 1.3125rem; */
     line-height: normal;
     padding: 0px 0.65rem;
