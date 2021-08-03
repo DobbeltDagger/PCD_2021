@@ -3,6 +3,7 @@
 :root {
   --main-text-color: rgba(255,255,255,0.86);
   --main-bg-color: #110a14;
+  --main-link-color: tomato; /* #990000; */
 }
 
 
@@ -186,7 +187,7 @@ strong {
 /* INLINE LINKS */
 a {
   text-decoration: none;
-  color: lightgreen; /* tomato; */
+  color: var(--main-link-color); /* lightgreen; /* tomato; */
   outline: 0;
 }
 a:active, a:focus { outline: 0; }
@@ -366,7 +367,7 @@ img.maxWidth {
     width: 8rem; /* 9rem; */
     height: 8rem; /* 9rem; */
     border-radius: 50%;
-    background-color: green;
+    background-color: var(--main-link-color); /* green; */
     background-image: url(../2021_bgImages/podcastOpenCall2.png);
     background-position: center;
     background-size: cover;
@@ -477,14 +478,15 @@ img.maxWidth {
     padding: 0.65rem 0.65rem 7rem 0.65rem; /* 1rem; */
     background-color: var(--main-bg-color);
     /* background-image: url(../2021_bgImages/BgTiled.png); */
-    background-image: url(../2021_bgImages/greenBg2.jpg);
+    /* background-image: url(../2021_bgImages/greenBg2.jpg); */
+    background-image: url(../2021_bgImages/blueBg.jpg);
     background-position: top left;
     background-repeat: repeat;
     min-height: 100vh;
     color: rgba(255,255,255,0.9);
   }
   #mainWrapper a {
-    color: lightgreen; /* tomato; */
+    color: var(--main-link-color); /* lightgreen; /* tomato; */
   }
 
   #menuWrapper {
