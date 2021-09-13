@@ -6,4 +6,5 @@ url: ''
 thumbUrl: '/assets/2021_AboutThumbs/MathildeGajhede.jpg'
 tags: 'PCD2021about'
 date: 1958-01-01
+eleventyExcludeFromCollections: true
 ---
