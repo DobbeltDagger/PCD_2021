@@ -65,8 +65,10 @@ sub { bottom: -0.25em }
 
 /* imgs fit column */
 .fitColumn {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 100%;
   height: auto;
+  margin-bottom: 1rem;
 }
 
 #gmap {
