@@ -245,6 +245,7 @@ img.maxWidth {
 #galleryWrapper a,
 #videoGalleryWrapper a {
   padding: 0px 0.25em 0.5em 0.25em;
+  margin-bottom: 0.5rem;
 }
 
 #galleryWrapper a img,

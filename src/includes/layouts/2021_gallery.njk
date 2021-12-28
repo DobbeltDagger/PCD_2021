@@ -4,7 +4,7 @@
 
   <div class='maxWidth'>
     <div id='galleryWrapper'>
-      {% for thumb in collections.PCD2021gallery %}
+      {% for thumb in collections.PCD2021gallery | reverse %}
         <a
           data-mediabox="PCD2021gallery"
           data-title="Processing Community Day @Aarhus 2021"
