@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="PCD @ Aarhus 2020 will address the notion of openness and sharing in software ecology, referring broadly to the open/free paradigm for social participation and engagement to create a sustainable community. With inspiration from the free/open-source software movement we want to promote the idea of having the freedom and rights to use, study, create, modify and share software regardless of age, gender, race and class.">
+  <link rel="icon" href="/assets/images/favicon.png" sizes="128x128" type="image/png">
+  <title>{{ title }} | Processing Community Day @ Aarhus 2021</title>
+  <link href="/assets/css/2021_grid.css" rel="stylesheet" />
+  <link href="/assets/css/2021_podcastStyle.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/assets/js/libs/wa-mediabox/wa-mediabox.css">
+  <script type="text/javascript" src="/assets/js/libs/wa-mediabox/wa-mediabox.min.js"></script>
+</head>
+
+<body>
+  <div id="pageWrapper">
+    <div id="logo">
+      <a href="/" class='round'><img src="/assets/images/PCDlogo.png"></a>
+      <a href="/" class='text'>PCD2021</a>
+    </div>
+
+    <!--
+    <div id='podcastBtn'>
+      <a href='/PCDcast-Open-Call'>PCDcast OPEN CALL</a>
+    </div>
+    -->
+    
+    <header>
+      <div id="info">
+        <p>Processing<br>Community<br>Day<br>Aarhus<br>2021<br>Saturday,<br>October 9th<br>10.00&ndash;17.00<br>@DOMEN</p>
+      </div>
+    </header>
+
+    <div id="mainWrapper">
+
+      {% include "2021_menu.html" %}
+
+      {{ content | safe }}
+
+      <!-- for gallery content -->
+      {% block postContent %}{% endblock postContent %}
+    </div>
+
+  </div>
+
+  <!-- scripts here -->
+  <script src='/assets/js/App.js' type="text/javascript"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", (e) => { 
+      let app = new App();
+      app.init();
+      app.fitvids(document.querySelectorAll('.vid')); // fit all vids
+    });
+  </script>
+</body>
+

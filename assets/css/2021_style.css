@@ -3,6 +3,7 @@
 :root {
   --main-text-color: rgba(255,255,255,0.86);
   --main-bg-color: #110a14;
+  --main-link-color: tomato; /* #990000; */
 }
 
 
@@ -19,7 +20,8 @@ button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: ba
 button, input { line-height: normal; *overflow: visible; }
 
 /* Basic List styling */
-ul, ol { margin: 0 0 1.5385em 0; padding: 0 0 0 0; /* 1em; /* 1.25em; */ }
+/* ul { margin: 0 0 1.5385em 0; padding: 0 0 0 0; } */
+ul, ol { margin: 0 0 1.5385em 0; padding: 0 0 0 0; }
 dd { margin: 0 0 0 3em; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
 li { line-height: 1.5385em; } /* 20 */
@@ -57,13 +59,16 @@ sub { bottom: -0.25em }
 }
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
+  box-shadow: none;
   background-color: transparent;
 }
 
 /* imgs fit column */
 .fitColumn {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 100%;
   height: auto;
+  margin-bottom: 1rem;
 }
 
 #gmap {
@@ -99,6 +104,7 @@ body {
   padding: 0em;
   height: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 ul {
@@ -109,6 +115,39 @@ ul {
 ul li {
   margin: 0px;
 }
+
+.Grid-cell ol {
+  margin: 0px 0px 1.5385em 0.25rem; /* 0 0 1.5385em 1rem; */
+  padding: 0px 0px 0px 1rem;
+  list-style-position: outside;
+}
+.Grid-cell ol li {
+  /* border: 1px solid red; */
+  padding-left: 0.5rem;
+}
+.Grid-cell ul ol {
+  margin: 0px; /* 0 0 0px 1rem !important; */
+  list-style-type: circle;
+}
+.Grid-cell ul ol li {
+  /* border: 1px solid red; */
+}
+
+.Grid-cell ul {
+  margin: 0px 0px 1.5385em 0.25rem; /* 0 0 1.5385em 1rem; */
+  padding: 0px 0px 0px 1rem;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+.Grid-cell ul li {
+  /* border: 1px solid red; */
+  padding-left: 0.5rem;
+}
+.Grid-cell ul ul {
+  margin: 0 0 0px 1rem !important;
+  list-style-type: circle;
+}
+
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* TYPE STUFF */
@@ -150,7 +189,7 @@ strong {
 /* INLINE LINKS */
 a {
   text-decoration: none;
-  color: lightgreen; /* tomato; */
+  color: var(--main-link-color); /* lightgreen; /* tomato; */
   outline: 0;
 }
 a:active, a:focus { outline: 0; }
@@ -168,10 +207,12 @@ a img {
 
 
 
-
 /* ************************************************************************** */
 /* Other Wrappers */
 
+
+
+/* menu */
 
 #menuWrapper {
   display: block;
@@ -261,7 +302,7 @@ img.maxWidth {
 .programEntry {
   width: 100%;
   padding: 0.4em 0px; /* 0.5em 0px; */
-  border-bottom: 1px solid rgba(121, 94, 94, 0.1); /*  1px solid rgba(32, 27, 63, 0.1); */
+  border-bottom: 1px solid rgba(255,255,255,0.075); /* rgba(121, 94, 94, 0.1); /*  1px solid rgba(32, 27, 63, 0.1); */
 }
 
 .programEntry span.timeWrapper {
@@ -304,7 +345,40 @@ img.maxWidth {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
+    overflow-x: hidden;
   }
+
+  /* PODCAST bubble to click */
+  #podcastBtn {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 8rem; /* 9rem; */
+    height: 8rem; /* 9rem; */
+    top: auto; /* 40px; */
+    bottom: 0px; /* auto */
+    right: 0px;
+    overflow: hidden;
+  }
+
+  #podcastBtn a {
+    position: absolute;
+    top: auto; /* 0px; */
+    bottom: -3px; /* auto */
+    right: -3px;
+    display: block;
+    width: 8rem; /* 9rem; */
+    height: 8rem; /* 9rem; */
+    border-radius: 50%;
+    background-color: var(--main-link-color); /* green; */
+    background-image: url(../2021_bgImages/podcastOpenCall2.png);
+    background-position: center;
+    background-size: cover;
+    text-indent: -999em;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
 
   /* HERO Wrapper */
   .heroWrapper {
@@ -340,9 +414,10 @@ img.maxWidth {
   .partnerLogo {
     display: block;
     float: left;
-    height: 60px;
+    height: 50px; /* 60px; */
     width: auto;
     margin-right: 2.25rem;
+    margin-bottom: 1.5rem;
     opacity: 0.65;
   }
   .partnerLogo:last-of-type {
@@ -358,8 +433,9 @@ img.maxWidth {
     height: auto;
     float: left;
     z-index: 1000;
-    opacity: 0.78;
+    opacity: 0.9; /* 1; /* 0.78; */
     display: none;
+    transform: rotateZ(-1deg);
   }
   #logo a.round img {
     max-width: 100%;
@@ -369,12 +445,13 @@ img.maxWidth {
   /* text logo */
   #logo a.text {
     position: absolute;
-    top: 19px;
-    left: 18px;
+    top: 1.0rem; /* 19px; */
+    left: 0.65rem; /* 18px; */
     display: block;
     width: auto;
     float: left;
-    font-size: 32px;
+    font-size: 28px; /* 32px; */
+    line-height: 28px;
     font-weight: 700;
     color: var(--main-text-color);
     z-index: 1000;
@@ -402,16 +479,18 @@ img.maxWidth {
 
   #mainWrapper {
     flex: 0 0 100%; 
-    padding: 1rem;
+    padding: 0.65rem 0.65rem 7rem 0.65rem; /* 1rem; */
     background-color: var(--main-bg-color);
-    background-image: url(../2021_bgImages/BgTiled.png);
+    /* background-image: url(../2021_bgImages/BgTiled.png); */
+    /* background-image: url(../2021_bgImages/greenBg2.jpg); */
+    background-image: url(../2021_bgImages/blueBg.jpg);
     background-position: top left;
     background-repeat: repeat;
     min-height: 100vh;
     color: rgba(255,255,255,0.9);
   }
   #mainWrapper a {
-    color: lightgreen; /* tomato; */
+    color: var(--main-link-color); /* lightgreen; /* tomato; */
   }
 
   #menuWrapper {
@@ -447,7 +526,7 @@ img.maxWidth {
     display: block;
     float: right;
     padding: 0px;
-    margin: -1rem -1rem 0px 0px; /* 0px; */
+    margin: -1rem -0.65rem 0px 0px; /* -1rem -1rem 0px 0px; /* 0px; */
     color: var(--main-text-color);
   }
 
@@ -462,10 +541,14 @@ img.maxWidth {
     margin: 0px;
   }
   .burgerWrapper a#burger #burgerIcon {
-    padding: 0.25em 0.8em 0px 0.6em;
+    /* padding: 0.25em 0.8em 0px 0.6em; */
+    /* padding: 0.35em 0.5em 0px 0.6em; */
+    padding: 0.45em 0.5em 0px 0.6em;
   }
   .burgerWrapper a#burger #crossIcon {
-    padding: 0.25em 0.5em 0px 0.9em;
+    /* padding: 0.25em 0.5em 0px 0.9em; */
+    /* padding: 0.35em 0.5em 0px 0.6em; */
+    padding: 0.45em 0.5em 0px 0.6em;
   }
 
   .burgerWrapper a#burger #burgerIcon.hide,
@@ -476,7 +559,9 @@ img.maxWidth {
   /* mobileNav */
   ul.mobileNav {
     list-style: none;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
+    margin: 0px 0px 1.5rem 0px;
+    padding: 0px;
     flex: 0 0 100%;
     height: auto;
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -604,6 +689,7 @@ img.maxWidth {
   .peopleEntry a,
   .workshopEntry a {
     overflow-wrap: break-word;
+    word-break: break-all;
   }
   .peopleEntry span.whyCode {
     display: block;
@@ -711,6 +797,22 @@ img.maxWidth {
     justify-content: flex-start;
     align-items: stretch;
   }
+
+  /* PODCAST bubble to click */
+  #podcastBtn {
+    width: 9rem; /* 8rem; /* 9rem; */
+    height: 9rem; /* 8rem; /* 9rem; */
+    top: 40px; /* auto; /* 40px; */
+    bottom: 0px; /* auto */
+  }
+
+  #podcastBtn a {
+    top: 0px; /* auto; /* 0px; */
+    bottom: auto; /* -3px; /* auto */
+    width: 9rem; /* 8rem; /* 9rem; */
+    height: 9rem; /* 8rem; /* 9rem; */
+  }  
+
 
   .heroWrapper {
     /* margin: 0px -2rem 3rem -2rem; */
