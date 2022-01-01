@@ -581,6 +581,7 @@ img.maxWidth {
     display: block; /* inline-block; */
     float: left;
     width: 100%;
+    padding-left: 0px;
   }
   #mainWrapper ul.mobileNav li a {
     display: block;
