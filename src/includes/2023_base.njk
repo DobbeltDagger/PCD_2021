@@ -14,31 +14,30 @@
 </head>
 
 <body>
-  <div id="pageWrapper">
+  <div class="pageWrapper">
 
     <div id="logo">
-      <a href="/" class='round'><img src="/assets/images/PCDlogo.png"></a>
+      <a href="/" class='round'><img src="/assets/images/PCDlogo2023.png"></a>
       <a href="/" class='text'>PCD2023</a>
     </div>
 
-    <!-- 
-    <div id='podcastBtn'>
-      <a href='/PCDcast-Open-Call'>PCDcast OPEN CALL</a>
-    </div>
-    -->   
-
     <header>
       <div id="info">
-        <p>Processing<br>Community<br>Day<br>Aarhus<br>2023<br>Saturday,<br>September 30th<br>10.00&ndash;18.00<br>@DIDAKTEKET</p>
+        Processing<br>
+        Community<br>
+        Day<br>
+        Aarhus<br>
+        2023<br>
+        Saturday,<br>
+        September 30th<br>
+        10.00&ndash;18.00<br>
+        @DIDAKTEKET
       </div>
     </header>
 
     <div id="mainWrapper">
-
-      {% include "2023_menu.html" %}
-
+      {# include "2023_menu.html" #}
       {{ content | safe }}
-
       <!-- for gallery content -->
       {% block postContent %}{% endblock postContent %}
     </div>
