@@ -171,10 +171,23 @@ a img {
 }
 
 
+/* ******************************************************************* */
+/* Partner logo wrapper */
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(6, 110px);
+  grid-gap: 1em;
+}
+.logos a img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.875;
+}
+
 
 /* ******************************************************************* */
 /* THREE layout */
-
 
 #threeWrapper {
   position: absolute;
