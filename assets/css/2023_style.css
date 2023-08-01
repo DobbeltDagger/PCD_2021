@@ -89,22 +89,12 @@ body {
   height: 100dvh;
   z-index: 1;
   background-image:
-  linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.0)),
-  url('../images/Dokk1.jpg');
+    linear-gradient(to right, rgba(255,255,255,1.0), rgba(255,255,255,0.96) 20%, rgba(255,255,255,0.0) 80%),
+    linear-gradient(0.49375turn, rgba(255,255,255,1.0), rgba(255,255,255,1.0) 10%, rgba(255,255,255,0.0) 10%),
+    url('../images/2023_bgtest2.jpg');
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.bigBgImgWrapper::before {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: block;
-  z-index: 10;
-  width: 200px;
-  height: 100dvh;
-  background-color: pink;
-  border: 1px solid blue;
 }
 
 
@@ -367,9 +357,9 @@ a img {
     display: block;
     float: right;
     padding: 0px;
-    /* margin: -1rem -0.65rem 0px 0px; */
     margin: -1rem -1rem 0px 0px;
     color: var(--main-text-color);
+    display: none !important; /* FOR NOW */
   }
 
   .burgerWrapper a#burger #burgerIcon,
