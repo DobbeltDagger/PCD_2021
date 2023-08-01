@@ -3,18 +3,155 @@ layout: "2023_base.njk"
 title: "Frontpage"
 ---
 
-  <!-- full width hero -->
-  <!-- <div class='heroWrapper'></div> -->
+  <!-- main wrapper -->
+  <div id="mainWrapper">
 
-  <!-- text here -->
-  <div class="maxWidth">
-
-    <!-- new text -->
-    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
-      <div class="Grid-cell">
-        <h2 class='alignCenter'>INFRA</h2>
-        <p>Quisque a neque non purus venenatis tempor at vel risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed suscipit risus non tristique pretium. Morbi enim libero, lobortis ac rhoncus eget, varius quis nulla. Nullam nec magna pharetra, tristique erat ac, lobortis sapien. Mauris porttitor luctus mauris, eget sodales magna rhoncus id. Sed id nisl congue, lacinia risus nec, euismod est. In tincidunt aliquam nisl vel lobortis. In pretium urna magna, in ultricies libero tempus egestas. Nunc dapibus euismod est a ullamcorper. Fusce vel viverra ligula. Fusce sed ex dui. Phasellus tincidunt nisl in consectetur vulputate. Duis rutrum egestas purus ac accumsan.</p>
-        <p>Maecenas nec faucibus justo, sed elementum massa. Quisque bibendum ligula neque, id sagittis ipsum malesuada eget. Aenean placerat mi at diam pulvinar, eget lacinia elit pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam arcu sapien, rhoncus a augue non, tristique venenatis metus. Donec sagittis ut augue ac placerat. Nunc viverra vehicula sem, a posuere justo pulvinar ac. Fusce maximus lacus dui, euismod vulputate lectus dapibus eget. Nunc mattis dolor id commodo imperdiet. Nam mattis nisi quis lorem pharetra commodo.</p>
+    <div id="menuWrapper" class="unselectable">
+      <div class="burgerWrapper">
+        <!-- burger -->
+        <a id="burger">
+          <div id="burgerIcon">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 21 21" size="48" height="48" width="48"
+            ><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+          </div>
+          <div id="crossIcon" class="hide">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 21 21" size="48" height="48" width="48"
+            ><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+          </div>
+        </a>
+      </div>
+      <div id="mobileNavWrapper" class="hide">
+        <ul class="mobileNav">
+          <li class="listItem">
+            <a href="/program/" class="anchor">Program</a>
+          </li>
+          <li class="listItem hasChildren">
+            <a href="/workshops/" class="anchor">Workshops</a>
+            <ul>
+              <li class="listItem">
+                <a href="/2021/workshops/machineLearningWorkshop/" class="anchor" >Machine Learning Workshop</a>
+              </li>
+              <li class="listItem">
+                <a href="/workshops/machineLearningWorkshop/" class="anchor" >Machine Learning Workshop</a>
+              </li>
+              <li class="listItem">
+                <a href="/workshops/AVisualIntroductionToProgramming/" class="anchor" >Grow Your Own Cloud</a>
+              </li>
+              <li class="listItem">
+                <a href="/workshops/gyoc/" class="anchor" >Grow Your Own Cloud</a>
+              </li>
+              <li class="listItem">
+                <a href="/2021/workshops/liveCodingSonicPiWorkshop/" class="anchor" >Live Coding Workshop</a>
+              </li>
+              <li class="listItem">
+                <a href="/workshops/liveCodingSonicPiWorkshop/" class="anchor" >Live Coding Workshop</a>
+              </li>
+            </ul>
+          </li>
+          <li class="listItem">
+            <a href="/PCDcast/" class="anchor">PCDcast</a>
+          </li>
+          <li class="listItem">
+            <a href="/gallery/" class="anchor">Gallery</a>
+          </li>
+          <li class="listItem">
+            <a href="/resources/" class="anchor">Resources</a>
+          </li>
+          <li class="listItem">
+            <a href="/about/" class="anchor">About</a>
+          </li>
+          <li class="listItem">
+            <a href="/whycode/" class="anchor">Why Code?</a>
+          </li>
+          <li class="listItem">
+            <a href="/archive/" class="anchor">Archive</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
+
+    <!-- info for resp. devices AND for DESKTOP!! -->
+    <div class="mainInfoWrapper">
+      <h2>
+        <span>Processing</span>
+        <span>Community</span>
+        <span>Day</span>
+        <span>@Aarhus</span>
+        <span>2023</span> 
+        <span>Saturday,</span>
+        <span>Sept 30th</span>
+        <span>10.00&ndash;18.00</span>
+        <span>@DIDAKTEKET</span>
+        <span>Arkitektskolen</span>
+        <span>Aarhus</span>
+      </h2>
+      <div class="bigSpacer"></div>
+    </div>
+
+
+    <!-- text here -->
+    <div class="maxWidth">
+
+      <!-- speakers + leads -->
+      <div class="Grid">
+        <div class="Grid-cell">
+          <!-- <h3>PCD 2023 speakers + workshop leads</h3> -->
+          <h3>Speakers + Workshop leads</h3>
+          <h2 class="names"><span>Honey Biba Beckerlee</span> / <span>Arnar Omarsson</span> / <span>Jussi Parikka</span> / <span>Renée Ridgway</span> / <span>Richard Vijgen</span></h2>
+          <div class="bigSpacer"></div>
+        </div>
+      </div>
+
+      <!-- INFRA headline -->
+      <div class="Grid">
+        <div class="Grid-cell">
+          <h2><i>INFRA</i></h2>
+          <!-- <h3>PCD @Aarhus 2023 introduction</h3> -->
+          <div class="smallSpacer"></div>
+        </div>
+      </div>
+      <!-- intro text -->
+      <div class="Grid">
+        <div class="Grid-cell">
+          <p>Processing Community Day (PCD) is an event initiated by <a href="https://processingfoundation.org/advocacy/processing-community-day-2020" target="_blank">The Processing Foundation</a>, involving local communities around the world in organizing a one-day event celebrating and exploring art, code, and diversity.</p>
+          <p>The theme of this year's PCD @Aarhus is “INFRA”, pointing to the explorative and the curious. The history and development of information technologies is very much a story of “hyper” &mdash; of technological infrastructures that exist somewhere above and beyond. Currently, with the advancement of AI, new computational abstractions are mapping and affecting our lives, stretching far beyond our ability to comprehend them.</p>
+          </p>
+        </div>
+        <div class="Grid-cell">
+          <p>However, it’s important to emphasize that we do understand some foundational proportions of computation. There are things we can know and understand about our technologies. Now is the time to go “infra” instead of “hyper” — to try and look under and into the technological abstractions, infrastructures and data practices to explore how we can build technologies that serve and make us better.</p>
+          <p>Processing Community Day Aarhus invites everyone to come explore new ways to look at art, code and technology. PCD presents five researchers and practitioners, each with their own perspective on the theme of “INFRA”. Come join us for an amazing day with workshops and presentations! —  Bring your laptop ..</p>
+        </div>
+      </div>
+
+      <!-- bigger space -->
+      <div class="bigSpacer"></div>
+
+      <!-- BE NOTIFIED! -->
+      <div class="Grid">
+        <div class="Grid-cell">
+          <h3>Be notified!</h3>
+          <div class="smallSpacer"></div>
+        </div>
+      </div>
+      <div class="Grid">
+        <div class="Grid-cell">
+          <p>Be sure to <u>follow us for PCD @Aarhus 2023 news</u>. The event program is on it's way soon, so check out these channels for new info &xrarr; &xrarr; &xrarr;</p>
+        </div>
+        <div class="Grid-cell">
+          <p><a href="https://discord.gg/Wt7p4nWm7n" target="_blank">PCD2023 public Discord</a><br/>
+          <a href="https://www.facebook.com/codeAndShareAarhus" target="_blank">Code&Share[ ] Facebook page</a><br/>
+          <a href="https://www.instagram.com/codeshareaarhus/" target="_blank">Code&Share[ ] Instagram</a></p>
+        </div>
+      </div>
+
+      <!-- bigger space -->
+      <div class="bigSpacer"></div>
+
+    </div>
+
+  </div> <!-- eof mainWrapper -->
+
+
+  <!-- BIG IMAGE OF ARKITEKTSKOLEN! ... -->
+  <div class="bigBgImgWrapper">&nbsp;</div>
+

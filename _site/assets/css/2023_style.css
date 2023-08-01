@@ -5,7 +5,7 @@
 :root {
   --main-text-color: rgba(0,0,0,0.96);
   --main-bg-color: white; /* #3f51b5; /* #110a14; */
-  --main-link-color: hotpink; /* tomato; /* #990000; */
+  --main-link-color: fuchsia; /* tomato; /* hotpink; /* tomato; /* #990000; */
   --edge-spacer: 1.5rem;
   --large-font: 2.1em;
 }
@@ -27,6 +27,14 @@
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: var(--main-link-color);
+}
+::selection {
+  color: white;
+  background: var(--main-link-color);
 }
 
 ::-webkit-scrollbar {
@@ -62,36 +70,88 @@ body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   font-family: 'karrikregular';
-  font-size: 18px;
-  line-height: 1.35em;
+  font-size: 17px; /* 18px; */
+  line-height: 1.375em; /* 1.35em; */
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
 }
+
+.maxWidth {
+  max-width: 1200px;
+}
+
+
+.bigBgImgWrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100dvh;
+  z-index: 1;
+  background-image:
+  linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.0)),
+  url('../images/Dokk1.jpg');
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bigBgImgWrapper::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  z-index: 10;
+  width: 200px;
+  height: 100dvh;
+  background-color: pink;
+  border: 1px solid blue;
+}
+
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* TYPE STUFF */
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
-  line-height: 1.15em;
+  line-height: 1.05em; /* 1.15em; */
   margin: 0px 0px 0em 0px;
 }
 h2 {
   font-size: 2.5em;
   padding: 0px;
-  margin-bottom: 0.475em;
+  margin-bottom: 0px; /* 0.475em; */
+}
+h2.names {
+  max-width: 32ch;
+}
+h2.names span {
+  display: inline-block;
+  word-break: keep-all;
 }
 h3 {
-  font-size: 1.375em;
+  font-size: 1.75em; /* 1.375em; */
+  line-height: 1.15em;
   padding: 0px;
 }
-h3.thin {
-  font-weight: 300;
+/* vertical spacers */
+.bigSpacer {
+  display: block;
+  width: 100%;
+  height: 3rem;
+}
+.mediumSpacer {
+  display: block;
+  width: 100%;
+  height: 2rem;
+}
+.smallSpacer {
+  display: block;
+  width: 100%;
+  height: 1rem;
 }
 
 p {
-  max-width: 65ch;
+  /* max-width: 65ch; */
   font-size: 1em;
   font-family: 'IBM Plex Mono', monospace;
   margin: 0px 0px 1.35em 0px;
@@ -103,13 +163,16 @@ a {
   text-decoration: none;
   color: var(--main-link-color);
   outline: 0;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 1px;
-  text-decoration-style: wavy;
+
 }
 a:active, a:focus { outline: 0; }
 a:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  -webkit-text-decoration-style: wavy;
+  -moz-text-decoration-style: wavy;
+  text-decoration-style: wavy; 
   outline: none;
 }
 
@@ -117,6 +180,27 @@ a img {
   border: 0px;
 }
 
+
+
+/* ******************************************************************* */
+/* THREE layout */
+
+
+#threeWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+}
+
+
+#threeFlow {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500px;
+  /* border: 1px solid red; */
+}
 
 /* *************************************************************** */
 /* ARCHIVE wrapper ******************************* */
@@ -174,6 +258,7 @@ a img {
     justify-content: flex-start;
     align-items: stretch;
     overflow-x: hidden;
+    position: relative;
   }
 
   header {
@@ -208,7 +293,6 @@ a img {
     float: left;
     z-index: 1000;
     opacity: 0.9;
-    display: none;
     transform: rotateZ(-1deg);
   }
   #logo a.round img {
@@ -233,22 +317,21 @@ a img {
     text-decoration: none;
   }
 
+  #mainWrapper {
+    padding: var(--edge-spacer);
+  }
 
-  header #info {
-    display: block;
-    position: fixed;
-    bottom: var(--edge-spacer);
-    left: var(--edge-spacer);
+  /* main info */
+  .mainInfoWrapper {
+    max-width: 30ch;
     margin: 0px;
-    font-family: 'karrikregular';
-    font-size: 2em;
-    line-height: 1em;
   }
-  header #info p {
-    margin: 0px;
-    font-size: var(--large-font);
-    line-height: 1em;    
+  .mainInfoWrapper h2 {
+    width: calc(100vw - (2 * var(--edge-spacer)));
   }
+  .mainInfoWrapper h2 span {
+    display: inline;
+  }  
 
 
   /* burger menu */
@@ -263,6 +346,11 @@ a img {
     max-height: 0px;
     border-bottom: 1px solid transparent;
   }
+
+  #menuWrapper {
+    margin-bottom: 0px;
+    min-height: 5em;
+  }  
   
   /* burger nav */
   .burgerWrapper {
@@ -279,7 +367,8 @@ a img {
     display: block;
     float: right;
     padding: 0px;
-    margin: -1rem -0.65rem 0px 0px;
+    /* margin: -1rem -0.65rem 0px 0px; */
+    margin: -1rem -1rem 0px 0px;
     color: var(--main-text-color);
   }
 
@@ -294,10 +383,10 @@ a img {
     margin: 0px;
   }
   .burgerWrapper a#burger #burgerIcon {
-    padding: 0.45em 0.5em 0px 0.6em;
+    padding: 0px; /*  0.45em 0.5em 0px 0.6em; */
   }
   .burgerWrapper a#burger #crossIcon {
-    padding: 0.45em 0.5em 0px 0.6em;
+    padding: 0px; /* 0.45em 0.5em 0px 0.6em; */
   }
 
   .burgerWrapper a#burger #burgerIcon.hide,
@@ -376,12 +465,13 @@ a img {
   }
 
   header {
-    flex: 0 0 30%;
+    flex: 0 0 32%;
     display: block;
   }
 
-  #logo a.text {
-    display: none;
+  #mainWrapper {
+    flex: 0 0 68%;
+    overflow-x: hidden;
   }
 
   #logo a.round {
@@ -390,17 +480,29 @@ a img {
     left: -3px;
     width: 120px;
     height: auto;
+    display: block;
     float: left;
+  }
+
+  /* main info */ 
+  .mainInfoWrapper {
+    position: fixed;
+    bottom: var(--edge-spacer);
+    left: var(--edge-spacer);
+    margin: 0px;
+    width: 30vw;
+    line-height: 1em; /* 1.15em; /* 1em */
+    z-index: 1000;
+  }
+  .mainInfoWrapper h2 {
+    width: auto;
+    line-height: 1em;
+  }
+  .mainInfoWrapper h2 span {
     display: block;
   }
-
-  #mainWrapper {
-    flex: 0 0 70%;
-    padding: var(--edge-spacer);
-  }
-
-  #menuWrapper {
-    margin-bottom: 0px;
+  .mainInfoWrapper .bigSpacer {
+    height: 0px;
   }
 
 
@@ -430,6 +532,13 @@ a img {
 /* 4. */
 @media screen and (min-width: 1280px) {
 
+  header {
+    flex: 0 0 28%;
+  }
+
+  #mainWrapper {
+    flex: 0 0 72%;
+  }
 
 }
 
