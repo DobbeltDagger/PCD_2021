@@ -176,7 +176,7 @@ a img {
 
 .logos {
   display: grid;
-  grid-template-columns: repeat(6, 110px);
+  /* grid-template-columns: repeat(6, 110px); */ /* set in media queries */
   grid-gap: 1em;
 }
 .logos a img {
@@ -264,6 +264,15 @@ a img {
     position: relative;
   }
 
+  h2.names,
+  h2.names span {
+    display: inline;
+    word-break: break-all;
+  }
+  .logos {
+    grid-template-columns: repeat(2, 1fr);
+  }  
+
   header {
     flex: 0 0 100%;
     display: none;
@@ -272,19 +281,6 @@ a img {
   #logo {
     position: relative;
   }
-
-  .partnerLogo {
-    display: block;
-    float: left;
-    height: 50px;
-    width: auto;
-    margin-right: 2.25rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.65;
-  }
-  .partnerLogo:last-of-type {
-    margin-right: 0px;
-  }  
 
   /* round logo */
   #logo a.round {
@@ -432,6 +428,9 @@ a img {
 
 @media (min-width: 400px) {
 
+  .logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
 }
 
@@ -441,7 +440,15 @@ a img {
 
 @media (min-width: 800px) {
   
-  
+  h2.names,
+  h2.names span {
+    display: inline-block;
+    word-break: keep-all;
+  }  
+  .logos {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
 }
 
 
@@ -460,6 +467,9 @@ a img {
     justify-content: flex-start;
     align-items: stretch;
   }
+  .logos {
+    grid-template-columns: repeat(5, 110px);
+  }  
 
   /* no mobile nav */
   .burgerWrapper a#burger #burgerIcon,
@@ -542,6 +552,10 @@ a img {
   #mainWrapper {
     flex: 0 0 72%;
   }
+
+  .logos {
+    grid-template-columns: repeat(6, 110px);
+  }  
 
 }
 
