@@ -1,14 +1,42 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { Object } from "/assets/js/Object.js";
 
 // global vars
+let isEnterClicked = false;
 let objects = [];
 let loader;
 let cube;
 let light1, light2;
 let scene, camera, renderer, controls;
+
+
+
+/////////////////////////////////////////////
+// handle user event click!
+const setupEnterBtnClick = () => {
+  const enterBtn = document.getElementById("enterBtn");
+  enterBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("clicked!");
+    isEnterClicked = true;
+    enterBtn.classList.add("hidden");
+
+    const vid = document.querySelector("#videoWrapper video");
+    vid.play();
+  })
+}
+
+
+/////////////////////////////////////////////
+// init the world videos
+const initVideos = () => {
+
+  console.log("init videos was run");
+
+}
 
 
 /////////////////////////////////////////////
@@ -54,15 +82,21 @@ const init3D = () => {
   loader = new GLTFLoader();
 
   // My world objects array
-  
   for (let i = 0; i < 5; i++) {
     const rndX = (Math.random() * 4) - 2;
     const rndY = (Math.random() * 4) - 2;
     const rndZ = (Math.random() * 4) - 2;
     objects[i] = new Object(rndX, rndY, rndZ);
-    objects[i].loadModel(loader, scene, '../models/ArnarsPeber/apple.gltf');
+    // objects[i].loadModel(loader, scene, '../models/ArnarsPeber/apple.gltf');
+    // objects[i].loadModel(loader, scene, '/assets/2023_models/ArnarsPeber/apple.gltf');
     // objects[i].init();
   }
+  objects[0].loadModel(loader, scene, '/assets/2023_models/ArnarsPeber/apple.gltf');
+  objects[0].playVideo();
+  objects[1].loadModel(loader, scene, '/assets/2023_models/gltf/Flower/Flower.glb'); // worked!
+  objects[2].loadModel(loader, scene, '/assets/2023_models/gltf/LeePerrySmith/LeePerrySmith.glb');
+  // objects[3].loadModel(loader, scene, '/assets/2023_models/GLBs/world_1.glb');
+  // objects[4].loadModel(loader, scene, '/assets/2023_models/GLBs/world_3.glb');
   console.log("objects:", objects);
 
 
@@ -89,8 +123,10 @@ const animate = () => {
 
   // rotate all objects in array
   for (let i = 0; i < objects.length; i++) {
-    objects[i].model.rotation.x += 0.01;
-    objects[i].model.rotation.y += 0.01;
+    if (objects[i].modelIsLoaded == true) {
+      objects[i].model.rotation.x += 0.01;
+      objects[i].model.rotation.y += 0.01;
+    }
   }
 
 	// required if controls.enableDamping or controls.autoRotate are set to true
@@ -102,6 +138,8 @@ const animate = () => {
 
 
 export {
+  setupEnterBtnClick,
   init3D,
+  initVideos,
   animate
 }

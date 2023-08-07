@@ -12,6 +12,7 @@ class Object {
     this.position = { x: x || 0, y: y || 0, z: z || 0 };
     this.rotation = 0;
     this.modelIsLoaded = false;
+    this.video = "";
   }
 
 
@@ -19,6 +20,27 @@ class Object {
   // setup this object
   init() {
     console.log("Hej INIT!")
+  }
+
+
+  //////////////////////////////////////////
+  // set the vid src and play the vid
+  playVideo() {
+
+    // empty the elm ...
+    const vidWrap = document.getElementById("videoWrapper");
+    console.log("vidWrap:", vidWrap);
+    const vid = document.querySelector("#videoWrapper video");
+    console.log("vid:", vid);
+
+    // maybe change the source here??
+    // or this is maybe another function??
+
+    vid.classList.remove("hidden");
+    // vid.play();
+    
+
+
   }
 
 
@@ -31,11 +53,11 @@ class Object {
       (gltf) => {
         scene.add( gltf.scene );
     
-        // gltf.animations; // Array<THREE.AnimationClip>
-        // gltf.scene; // THREE.Group
-        // gltf.scenes; // Array<THREE.Group>
-        // gltf.cameras; // Array<THREE.Camera>
-        // gltf.asset; // Object 
+        gltf.animations; // Array<THREE.AnimationClip>
+        gltf.scene; // THREE.Group
+        gltf.scenes; // Array<THREE.Group>
+        gltf.cameras; // Array<THREE.Camera>
+        gltf.asset; // Object 
         
         this.model = gltf.scene;
 

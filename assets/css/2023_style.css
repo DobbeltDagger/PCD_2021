@@ -187,13 +187,35 @@ a img {
 
 
 /* ******************************************************************* */
+/* ENTER button */
+
+a#enterBtn {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  background-color: var(--main-bg-color);
+  border-radius: 0.25em;
+  z-index: 9999;
+}
+a:hover#enterBtn {
+  cursor: pointer;
+  text-decoration: none;
+}
+a#enterBtn.hidden {
+  display: none;
+}
+
+
+/* ******************************************************************* */
 /* THREE layout */
 
 #threeWrapper {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 9999;
+  z-index: 9000;
 }
 
 
@@ -204,6 +226,31 @@ a img {
   height: 500px;
   /* border: 1px solid red; */
 }
+
+
+/* ******************************************************************* */
+/* THREE layout */
+
+#videoWrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100dvh;
+  z-index: -1;
+}
+
+#theVid {
+  opacity: 1.0;
+  transition: opacity 500ms ease-in-out;
+}
+#theVid.hidden {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+
+
 
 /* *************************************************************** */
 /* ARCHIVE wrapper ******************************* */

@@ -1,4 +1,4 @@
-import { init3D, animate } from '/assets/js/setup3Dworld.js';
+import { setupEnterBtnClick, init3D, initVideos, animate } from '/assets/js/setup3Dworld.js';
 
 
 window.addEventListener("DOMContentLoaded", (e) => {
@@ -12,6 +12,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
   
   // init out threejs world
   // animate has to run latest, because it loops!
-  // init3D();
-  // animate();
+  setupEnterBtnClick();
+  init3D();
+  initVideos();
+  animate();
 })
