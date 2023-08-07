@@ -4,7 +4,6 @@ import { setupEnterBtnClick, init3D, initVideos, animate } from '/assets/js/setu
 window.addEventListener("DOMContentLoaded", (e) => {
   // setup burger menu click
   const burgerBtn = document.getElementById("burger");
-  console.log("burgerBtn:", burgerBtn);
   burgerBtn.addEventListener("click", (e) => {
     e.preventDefault();
     console.log("burger was clicked!");
@@ -12,8 +11,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
   
   // init out threejs world
   // animate has to run latest, because it loops!
-  setupEnterBtnClick();
-  init3D();
-  initVideos();
-  animate();
+  // setupEnterBtnClick();
+  // init3D();
+  // initVideos();
+  // animate();
 })
