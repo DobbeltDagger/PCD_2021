@@ -493,7 +493,7 @@ a#enterBtn.hidden {
     word-break: keep-all;
   }  
   .logos {
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
 
 }
@@ -601,7 +601,7 @@ a#enterBtn.hidden {
   }
 
   .logos {
-    grid-template-columns: repeat(7, 110px);
+    grid-template-columns: repeat(8, 110px);
   }  
 
 }
