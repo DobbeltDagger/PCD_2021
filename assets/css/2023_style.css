@@ -112,7 +112,7 @@ h2 {
   margin-bottom: 0px; /* 0.475em; */
 }
 h2.names {
-  max-width: 32ch;
+  max-width: 34ch;
 }
 h2.names span {
   display: inline-block;
