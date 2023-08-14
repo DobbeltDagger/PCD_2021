@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { Object } from "/assets/js/Object.js";
 
@@ -82,21 +81,22 @@ const init3D = () => {
   loader = new GLTFLoader();
 
   // My world objects array
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 7; i++) {
     const rndX = (Math.random() * 4) - 2;
     const rndY = (Math.random() * 4) - 2;
     const rndZ = (Math.random() * 4) - 2;
     objects[i] = new Object(rndX, rndY, rndZ);
-    // objects[i].loadModel(loader, scene, '../models/ArnarsPeber/apple.gltf');
-    // objects[i].loadModel(loader, scene, '/assets/2023_models/ArnarsPeber/apple.gltf');
     // objects[i].init();
   }
   objects[0].loadModel(loader, scene, '/assets/2023_models/ArnarsPeber/apple.gltf');
   objects[0].playVideo();
+
   objects[1].loadModel(loader, scene, '/assets/2023_models/gltf/Flower/Flower.glb'); // worked!
-  objects[2].loadModel(loader, scene, '/assets/2023_models/gltf/LeePerrySmith/LeePerrySmith.glb');
-  // objects[3].loadModel(loader, scene, '/assets/2023_models/GLBs/world_1.glb');
-  // objects[4].loadModel(loader, scene, '/assets/2023_models/GLBs/world_3.glb');
+  objects[2].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/01.gltf'); // THAT WORKED!!
+  objects[3].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/02.gltf'); // THAT WORKED!!
+  objects[4].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/03.gltf'); // THAT WORKED!!
+  objects[5].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/04.gltf'); // THAT WORKED!!
+  objects[6].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/05.gltf'); // THAT WORKED!!
   console.log("objects:", objects);
 
 
@@ -112,6 +112,7 @@ const init3D = () => {
   }
 
 }
+
 
 ///////////////////////////////
 // Animate the scene
@@ -131,10 +132,8 @@ const animate = () => {
 
 	// required if controls.enableDamping or controls.autoRotate are set to true
 	controls.update();  
-
 	renderer.render( scene, camera );
 }
-// animate();
 
 
 export {
