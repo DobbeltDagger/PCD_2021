@@ -524,17 +524,30 @@ a#enterBtn.hidden {
     overflow-wrap: break-word;
     word-break: break-all;
   }
-
-
   .workshopEntry {
     overflow: hidden;
     padding-bottom: 1.5em;
   }
-
-
   .workshopEntry {
     flex: 0 0 100%;
   }
+
+  /* WHYCODE entry */
+  .WhyCodeWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+  .whyCodeEntry { padding: 0px; }
+  .peopleEntry span.whyCode { font-style: italic; }
+  .whyCodeEntry span.name { font-weight: bold; }
+  .whyCodeEntry span.whyCode { font-style: italic; }
+  .whyCodeEntry {
+    padding-bottom: 1.5em;
+  }
+  .whyCodeEntry {
+    flex: 0 0 100%;
+  }  
 
 
 }
@@ -547,6 +560,10 @@ a#enterBtn.hidden {
 
   .logos {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .WhyCodeWrapper {
+    grid-template-columns: 1fr 1fr;
   }
 
 }
@@ -569,7 +586,8 @@ a#enterBtn.hidden {
   .workshopEntry {
     flex: 0 0 50%;
   }
-    
+
+
 }
 
 
@@ -676,7 +694,11 @@ a#enterBtn.hidden {
 
   .logos {
     grid-template-columns: repeat(8, 110px);
-  }  
+  }
+
+  .WhyCodeWrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
 }
 
