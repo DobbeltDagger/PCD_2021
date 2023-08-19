@@ -100,7 +100,6 @@ const init3D = () => {
   console.log("objects:", objects);
 
 
-
   ///////////////////////////////
   // resize
   window.addEventListener( 'resize', onWindowResize, false );

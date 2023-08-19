@@ -11,8 +11,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
   
   // init out threejs world
   // animate has to run latest, because it loops!
-  setupEnterBtnClick();
-  init3D();
-  initVideos();
-  animate();
+  // setupEnterBtnClick();
+  // init3D();
+  // initVideos();
+  // animate();
 })

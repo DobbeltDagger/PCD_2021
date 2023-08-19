@@ -41,14 +41,37 @@
       <a href="/" class='round'><img src="/assets/images/PCDlogo2023.png"></a>
     </div>
 
-    <header>&nbsp;</header>
+    <header></header>
 
-    {# include "2023_menu.html" #}
-    {{ content | safe }}
-    <!-- for gallery content -->
-    {% block postContent %}{% endblock postContent %}
+    <!-- info for resp. devices AND for DESKTOP!! -->
+    <div class="mainInfoWrapper">
+      <h2>
+        <span>Processing</span>
+        <span>Community</span>
+        <span>Day</span>
+        <span>@Aarhus</span>
+        <span>2023</span> 
+        <span>Saturday,</span>
+        <span>Sept 30th</span>
+        <span>10.00&ndash;18.00</span>
+        <span>@DIDAKTEKET</span>
+        <span>Arkitektskolen</span>
+        <span>Aarhus</span>
+      </h2>
+      <div class="bigSpacer"></div>
+    </div>    
 
-  </div>
+    <!-- main wrapper -->
+    <div id="mainWrapper">
+      {% include "2023_menu.html" %}
+      {{ content | safe }}
+      {% block postContent %}{% endblock postContent %}
+    </div> <!-- eof mainWrapper -->
+
+  </div> <!-- eof pagewrapper -->
+
+  <!-- BIG IMAGE OF ARKITEKTSKOLEN! ... -->
+  <div class="bigBgImgWrapper">&nbsp;</div>
 
   <!-- scripts here -->
   <script type="module" src="/assets/js/index.js"></script>
