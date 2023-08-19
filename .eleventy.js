@@ -15,7 +15,15 @@ module.exports = function(eleventyConfig) {
       else if (a.data.sortName < b.data.sortName) return 1;
       else return 0;
     })
-  });  
+  });
+  eleventyConfig.addCollection("aboutAscending2023", function(collection) {
+    return collection.getFilteredByGlob("src/aboutThumbCollection/*.md").sort((a, b) => {
+      // console.log("sortName a & b:", a.data.sortName, b.data.sortName); // , b);
+      if (a.data.sortName > b.data.sortName) return -1;
+      else if (a.data.sortName < b.data.sortName) return 1;
+      else return 0;
+    })
+  });    
 
   eleventyConfig.addCollection("whycodeAscending2021", function(collection) {
     return collection.getFilteredByGlob("src/2021/whyCodeCollection/*.md").sort((a, b) => {

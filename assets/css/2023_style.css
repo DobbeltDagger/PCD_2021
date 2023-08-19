@@ -539,7 +539,6 @@ a#enterBtn.hidden {
     grid-gap: 1em;
   }
   .whyCodeEntry { padding: 0px; }
-  .peopleEntry span.whyCode { font-style: italic; }
   .whyCodeEntry span.name { font-weight: bold; }
   .whyCodeEntry span.whyCode { font-style: italic; }
   .whyCodeEntry {
@@ -547,8 +546,59 @@ a#enterBtn.hidden {
   }
   .whyCodeEntry {
     flex: 0 0 100%;
-  }  
+  }
 
+  /* PEOPLE ENTRY */
+  .peopleWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+  .peopleWrapper {
+    margin-bottom: 2.5rem;
+  }
+
+  .peopleEntry {
+    padding: 0px; /* 0px 0.35em; */
+  }
+  .peopleEntry span.thumb a {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+  }
+  .peopleEntry span.thumb a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+    margin: 0px;
+  } 
+  .peopleEntry span.name {
+    display: block;
+    width: 100%;
+    float: left;
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+  .peopleEntry span.desc {
+    display: block;
+    width: 100%;
+    float: left;
+  }
+  .peopleEntry a {
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+  .peopleEntry span.whyCode {
+    display: block;
+    float: left;
+    font-style: italic;
+  }
+  .peopleEntry {
+    overflow: hidden;
+    padding-bottom: 1.5em;
+  }
 
 }
 
@@ -587,6 +637,9 @@ a#enterBtn.hidden {
     flex: 0 0 50%;
   }
 
+  .peopleWrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
 }
 
@@ -699,7 +752,10 @@ a#enterBtn.hidden {
   .WhyCodeWrapper {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
+  .peopleWrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
 }
 
 
@@ -708,6 +764,10 @@ a#enterBtn.hidden {
 /* 4. */
 @media screen and (min-width: 1600px) {
   
+  .peopleWrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }  
+
 }
 
 
