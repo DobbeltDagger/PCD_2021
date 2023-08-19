@@ -43,27 +43,10 @@
 
     <header></header>
 
-    <!-- info for resp. devices AND for DESKTOP!! -->
-    <div class="mainInfoWrapper">
-      <h2>
-        <span>Processing</span>
-        <span>Community</span>
-        <span>Day</span>
-        <span>@Aarhus</span>
-        <span>2023</span> 
-        <span>Saturday,</span>
-        <span>Sept 30th</span>
-        <span>10.00&ndash;18.00</span>
-        <span>@DIDAKTEKET</span>
-        <span>Arkitektskolen</span>
-        <span>Aarhus</span>
-      </h2>
-      <div class="bigSpacer"></div>
-    </div>    
-
     <!-- main wrapper -->
     <div id="mainWrapper">
       {% include "2023_menu.html" %}
+      {% include "2023_mainInfo.html" %}
       {{ content | safe }}
       {% block postContent %}{% endblock postContent %}
     </div> <!-- eof mainWrapper -->

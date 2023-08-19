@@ -69,7 +69,8 @@ body {
   width: 100%;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
-  font-family: 'karrikregular';
+  
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 17px; /* 18px; */
   line-height: 1.375em; /* 1.35em; */
   margin: 0px;
@@ -102,14 +103,14 @@ body {
 /* TYPE STUFF */
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'karrikregular';
   font-weight: 400;
   line-height: 1.05em; /* 1.15em; */
-  margin: 0px 0px 0em 0px;
+  margin: 0px 0px 1rem 0px;
 }
 h2 {
   font-size: 2.5em;
   padding: 0px;
-  margin-bottom: 0px; /* 0.475em; */
 }
 h2.names {
   max-width: 34ch;
@@ -143,7 +144,7 @@ h3 {
 p {
   /* max-width: 65ch; */
   font-size: 1em;
-  font-family: 'IBM Plex Mono', monospace;
+  
   margin: 0px 0px 1.35em 0px;
 }
 
@@ -266,19 +267,18 @@ a#enterBtn.hidden {
 
 /* Program entries ******************************** */
 
+.programWrapper {
+  /* border: 1px solid red; */
+}
+
+.programEntry {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+}
 .programEntry {
   width: 100%;
-  padding: 0.4em 0px;
-  border-bottom: 1px solid rgba(255,255,255,0.075);
-}
-.programEntry span.timeWrapper {
-  display: inline-block;
-  padding-right: 1em;
-  min-width: 120px;
-  opacity: 0.82;
-}
-.programEntry span.infoWrapper {
-  display: inline-block;
+  padding: 0.2em 0px;
+  border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 .programEntry span.title {
   font-style: italic;
@@ -465,6 +465,11 @@ a#enterBtn.hidden {
     width: 100%;
     padding-left: 0px;
   }
+  ul.mobileNav li a {
+    font-family: 'karrikregular';
+    font-weight: 400;
+    font-size: 1.125em;
+  }  
 
 }
 
@@ -579,11 +584,9 @@ a#enterBtn.hidden {
     display: inline-block;
     width: auto;
     float: none;
-    margin-right: 1em;
+    margin-right: 1.5em;
   }
-  ul.mobileNav li a {
-    font-size: 1.5em;
-  }
+
 
 }
 
