@@ -471,6 +471,72 @@ a#enterBtn.hidden {
     font-size: 1.125em;
   }  
 
+
+  /* WORKSHOP wrapper */
+  .workshopWrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0px -0.35em 0px -0.35em;
+  }
+  .workshopEntry {
+    padding: 0px 0.35em;
+  }
+  .workshopEntry span.thumb a {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+  }
+  .workshopEntry span.thumb a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+    margin: 0px;
+  }
+  .workshopEntry span.thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+    margin: 0px;
+    
+  }  
+  .workshopEntry span.name {
+    display: block;
+    width: 100%;
+    float: left;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  .workshopEntry span.desc {
+    display: block;
+    width: 100%;
+    float: left;
+    /* margin-bottom: 1.5em; */
+  }
+  .workshopEntry a {
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+
+
+  .workshopEntry {
+    overflow: hidden;
+    padding-bottom: 1.5em;
+  }
+
+
+  .workshopEntry {
+    flex: 0 0 100%;
+  }
+
+
 }
 
 
@@ -500,6 +566,10 @@ a#enterBtn.hidden {
     grid-template-columns: repeat(8, 1fr);
   }
 
+  .workshopEntry {
+    flex: 0 0 50%;
+  }
+    
 }
 
 
