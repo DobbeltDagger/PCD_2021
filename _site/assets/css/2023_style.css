@@ -369,11 +369,12 @@ a#enterBtn.hidden {
 
   /* main info */
   .mainInfoWrapper {
-    max-width: 30ch;
+    max-width: none; /* 30ch; */
     margin: 0px;
   }
   .mainInfoWrapper h2 {
     width: calc(100vw - (2 * var(--edge-spacer)));
+    margin-bottom: 0px;
   }
   .mainInfoWrapper h2 span {
     display: inline;
@@ -461,15 +462,28 @@ a#enterBtn.hidden {
   }
   ul.mobileNav li {
     display: block;
-    float: left;
+    /* float: left; */
     width: 100%;
     padding-left: 0px;
   }
   ul.mobileNav li a {
     font-family: 'karrikregular';
     font-weight: 400;
-    font-size: 1.125em;
-  }  
+    font-size: 1.5em; /* 1.125em; */
+    display: block;
+    /* float: left; */
+    width: max-content;
+    margin: 0px auto;
+    padding: 0.15em 0px;
+  }
+  ul.mobileNav li a:hover {
+    color: var(--main-text-color);
+    text-decoration: none;
+  }
+  ul.mobileNav li.active a {
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+  }
 
 
   /* WORKSHOP wrapper */
@@ -698,6 +712,7 @@ a#enterBtn.hidden {
     width: 30vw;
     line-height: 1em; /* 1.15em; /* 1em */
     z-index: 1000;
+    max-width: 30ch;     
   }
   .mainInfoWrapper h2 {
     width: auto;
@@ -712,6 +727,9 @@ a#enterBtn.hidden {
 
 
   /* mobileNav */
+  #mobileNavWrapper.hide {
+    max-height: none;
+  }
   ul.mobileNav {
     margin-bottom: 5rem;
     flex: 0 0 100%;
@@ -727,6 +745,9 @@ a#enterBtn.hidden {
     float: none;
     margin-right: 1.5em;
   }
+  ul.mobileNav li a {
+    font-size: 1.125em;
+  }  
 
 
 }
