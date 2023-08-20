@@ -1,9 +1,9 @@
 ---
 name: 'Honey Biba Beckerlee'
 sortName: 'Beckerlee'
-description: 'lorem ipsum'
-url: 'https://andersvisti.dk/'
-thumbUrl: '/assets/2021_AboutThumbs/AndersVisti2.jpg'
+description: 'tbc'
+url: 'https://www.honeybibabeckerlee.com/'
+thumbUrl: '/assets/2023_AboutThumbs/AvatarCat.jpg'
 tags: 'PCD2023about'
 date: 1958-01-01
 ---
