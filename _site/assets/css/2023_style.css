@@ -81,6 +81,10 @@ body {
 .maxWidth {
   max-width: 1200px;
 }
+.maxColWidth {
+  max-width: 100%;
+  height: auto;
+}
 
 
 .bigBgImgWrapper {
@@ -488,51 +492,39 @@ a#enterBtn.hidden {
 
   /* WORKSHOP wrapper */
   .workshopWrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    width: auto;
-    margin: 0px -0.35em 0px -0.35em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--edge-spacer);
   }
   .workshopEntry {
-    padding: 0px 0.35em;
+    padding: 0px;
   }
   .workshopEntry span.thumb a {
     width: 100%;
     height: auto;
     display: block;
-    float: left;
   }
   .workshopEntry span.thumb a img {
     width: 100%;
     height: auto;
     display: block;
-    float: left;
     margin: 0px;
   }
   .workshopEntry span.thumb img {
     width: 100%;
     height: auto;
     display: block;
-    float: left;
-    margin: 0px;
-    
+    margin: 0px;    
   }  
   .workshopEntry span.name {
     display: block;
     width: 100%;
-    float: left;
     font-weight: bold;
     margin-top: 1em;
   }
   .workshopEntry span.desc {
     display: block;
     width: 100%;
-    float: left;
-    /* margin-bottom: 1.5em; */
   }
   .workshopEntry a {
     overflow-wrap: break-word;
@@ -542,9 +534,7 @@ a#enterBtn.hidden {
     overflow: hidden;
     padding-bottom: 1.5em;
   }
-  .workshopEntry {
-    flex: 0 0 100%;
-  }
+
 
   /* WHYCODE entry */
   .WhyCodeWrapper {
@@ -647,8 +637,8 @@ a#enterBtn.hidden {
     grid-template-columns: repeat(8, 1fr);
   }
 
-  .workshopEntry {
-    flex: 0 0 50%;
+  .workshopWrapper {
+    grid-template-columns: 1fr 1fr;
   }
 
   .peopleWrapper {
@@ -747,8 +737,7 @@ a#enterBtn.hidden {
   }
   ul.mobileNav li a {
     font-size: 1.125em;
-  }  
-
+  }
 
 }
 
