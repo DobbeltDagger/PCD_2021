@@ -260,13 +260,11 @@ a#enterBtn.hidden {
 /* *************************************************************** */
 /* ARCHIVE wrapper ******************************* */
 
-
 .archiveWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
+  grid-gap: var(--edge-spacer);
 }
-
 
 
 /* Program entries ******************************** */
@@ -540,7 +538,7 @@ a#enterBtn.hidden {
   .WhyCodeWrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1em;
+    grid-gap: var(--edge-spacer);
   }
   .whyCodeEntry { padding: 0px; }
   .whyCodeEntry span.name { font-weight: bold; }
