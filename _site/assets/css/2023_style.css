@@ -243,6 +243,7 @@ a#enterBtn.hidden {
   width: 100%;
   height: 100dvh;
   z-index: -1;
+  background-color: black;
 }
 
 #theVid {
@@ -267,21 +268,40 @@ a#enterBtn.hidden {
   z-index: 0;
 }
 
-#presenterWrapper #slideWrapper {
+#slideWrapper {
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100dvh;
-  border: 10px solid red;
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  opacity: 0.0;
+  transition: opacity 250ms ease-in-out;
+}
+#slideWrapper.shown {
+  opacity: 1.0;
 }
 
-#presenterWrapper #slideWrapper div {
-  border: 1px solid blue;
+/* single slide */
+#slideWrapper div {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100dvh;
+  border: 2px solid blue;
+  opacity: 0.0;
+  transition: opacity 500ms ease-in-out;
 }
+#slideWrapper div.shown {
+  opacity: 1.0;
+}
+
+
+
+/* *************************************************************** */
+/* SLIDES */
+
+
 
 
 

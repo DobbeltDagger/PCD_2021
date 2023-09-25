@@ -38,34 +38,34 @@ const setupEnterBtnClick = () => {
 const setupWorldNav = () => {
 
   // honey
-  document.getElementById("wn1").addEventListener("click", function(e) {
+  document.getElementById("wn0").addEventListener("click", function(e) {
     e.preventDefault(); console.log("wn1 clicked! Honey");
-    flyTo(1);
+    flyTo(0);
   })
   // Arnar
-  document.getElementById("wn2").addEventListener("click", function(e) {
+  document.getElementById("wn1").addEventListener("click", function(e) {
     e.preventDefault(); console.log("wn2 clicked! Arnar");
-    flyTo(2);
+    flyTo(1);
   })
   // Jussi
-  document.getElementById("wn3").addEventListener("click", function(e) {
+  document.getElementById("wn2").addEventListener("click", function(e) {
     e.preventDefault(); console.log("wn3 clicked! Jussi");
-    flyTo(3);
+    flyTo(2);
   })
   // Renée
-  document.getElementById("wn4").addEventListener("click", function(e) {
+  document.getElementById("wn3").addEventListener("click", function(e) {
     e.preventDefault(); console.log("wn4 clicked! Renée");
-    flyTo(4);
+    flyTo(3);
   })
   // Markus + Signe
-  document.getElementById("wn5").addEventListener("click", function(e) {
+  document.getElementById("wn4").addEventListener("click", function(e) {
     e.preventDefault(); console.log("wn5 clicked! Markus+Signe");
-    flyTo(5);
+    flyTo(4);
   })
   // Richard
-  document.getElementById("wn6").addEventListener("click", function(e) {
+  document.getElementById("wn5").addEventListener("click", function(e) {
     e.preventDefault(); console.log("wn6 clicked! Richard");
-    flyTo(6);
+    flyTo(5);
   })
 }
 
@@ -86,6 +86,8 @@ const flyTo = (destination) => {
   // for now, just start video and slides
   objects[destination].prepareVideo();
   objects[destination].playVideo();
+  objects[destination].prepareSlides();
+  objects[destination].playSlides();
 
 }
 

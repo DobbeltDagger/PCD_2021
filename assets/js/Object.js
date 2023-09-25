@@ -43,18 +43,57 @@ class Object {
   //////////////////////////////////////////
   // set the vid src and play the vid
   playVideo() {
-
     // empty the elm ...
-    const vidWrap = document.getElementById("videoWrapper");
-    console.log("vidWrap:", vidWrap);
+    // const vidWrap = document.getElementById("videoWrapper");
+    // console.log("vidWrap:", vidWrap);
     const vid = document.querySelector("#videoWrapper video");
     console.log("vid:", vid);
-
-    // maybe change the source here??
-    // or this is maybe another function??
-
     vid.classList.remove("hidden");
     vid.play();
+  }
+
+
+  //////////////////////////////////////////
+  // setup the slides here
+  prepareSlides() {
+
+    const slWrap = document.getElementById("slideWrapper");
+    
+    slWrap.innerHTML = "";
+
+    // build slides
+    // slide 1
+    const slide1 = document.createElement("div");
+    const portrait = document.createElement("img");
+    portrait.src = this.presenter.portraitUrl;
+    const bio = document.createElement("div");
+    bio.innerHTML = this.presenter.bio;
+    // slide 2
+    const slide2 = document.createElement("div");
+    const textElm = document.createElement("div");
+    textElm.innerHTML = this.presenter.text;
+
+    // append stuff
+    slide1.appendChild(portrait);
+    slide1.appendChild(bio);
+    slWrap.appendChild(slide1);
+    // append for slide 2
+    slide2.appendChild(textElm)
+    slWrap.appendChild(slide2);
+  }
+
+
+  //////////////////////////////////////////
+  // styart paying the slideshow here!
+  playSlides() {
+    const slWrap = document.getElementById("slideWrapper");
+    // show the slideshow
+    slWrap.classList.add("shown");
+
+    // now, start slides
+    const slidesInterval = setInterval(function() {
+      console.log("NEW SLIDE!!!!")
+    }, 500);    
   }
 
 

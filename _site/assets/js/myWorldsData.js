@@ -9,6 +9,7 @@ const worldData = [
     videoUrl: "/assets/2023_models/web_videos/world_01.mp4",
     presenter: {
       name: "Honey Biba Beckerlee",
+      portraitUrl: "/assets/2023_AboutThumbs/arnar.jpg",
       bio: "",
       text: ""
     }
@@ -23,6 +24,7 @@ const worldData = [
     videoUrl: "/assets/2023_models/web_videos/web_video_01.mp4",
     presenter: {
       name: "Arnar Ómarsson",
+      portraitUrl: "/assets/2023_AboutThumbs/arnar.jpg",
       bio: "",
       text: ""
     }
@@ -37,6 +39,7 @@ const worldData = [
     videoUrl: "/assets/2023_models/web_videos/web_video_02.mp4",
     presenter: {
       name: "Jussi Parikka",
+      portraitUrl: "/assets/2023_AboutThumbs/arnar.jpg",
       bio: "",
       text: ""
     }
@@ -51,6 +54,7 @@ const worldData = [
     videoUrl: "/assets/2023_models/web_videos/web_video_03.mp4",
     presenter: {
       name: "Renée Ridgway",
+      portraitUrl: "/assets/2023_AboutThumbs/arnar.jpg",
       bio: "",
       text: ""
     }
@@ -65,6 +69,7 @@ const worldData = [
     videoUrl: "/assets/2023_models/web_videos/web_video_04.mp4",
     presenter: {
       name: "Markus Alexander Mejer Bjerremand & Signe Regin Runge-Dalager",
+      portraitUrl: "/assets/2023_AboutThumbs/arnar.jpg",
       bio: "",
       text: ""
     }
@@ -79,6 +84,7 @@ const worldData = [
     videoUrl: "/assets/2023_models/web_videos/web_video_01.mp4",
     presenter: {
       name: "Richard Vijgen",
+      portraitUrl: "/assets/2023_AboutThumbs/arnar.jpg",
       bio: "",
       text: ""
     }
