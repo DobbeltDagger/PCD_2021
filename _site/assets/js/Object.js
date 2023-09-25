@@ -19,6 +19,8 @@ class Object {
     this.videoUrl = videoUrl || "";
     // bio and text for presenter
     this.presenter = presenter || {}
+
+    this.timeInterval = 8000;
   }
 
 
@@ -112,12 +114,20 @@ class Object {
     }
 
     // now, start slides
+    let _this = this;
+    // do the first now
+    setTimeout(function() {
+      hideSlides();
+      slides[currentSlide].classList.add("shown");
+      currentSlide++;
+      if (currentSlide >= slides.length) currentSlide = 0;      
+    }, 500)
     const slidesInterval = setInterval(function() {
       hideSlides();
       slides[currentSlide].classList.add("shown");
       currentSlide++;
       if (currentSlide >= slides.length) currentSlide = 0;
-    }, 1000);    
+    }, _this.timeInterval);    
   }
 
 
