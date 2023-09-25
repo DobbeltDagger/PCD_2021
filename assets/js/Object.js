@@ -97,13 +97,18 @@ class Object {
     console.log("slides:", slides);
     let currentSlide = 0;
 
+    // hide all the slides
+    function hideSlides() {
+      for(let i = 0; i < slides.length; i++) { slides[i].classList.remove("shown"); }
+    }
+
     // now, start slides
     const slidesInterval = setInterval(function() {
-      // console.log("NEW SLIDE!!!!")
+      hideSlides();
       slides[currentSlide].classList.add("shown");
       currentSlide++;
       if (currentSlide >= slides.length) currentSlide = 0;
-    }, 500);    
+    }, 1000);    
   }
 
 
