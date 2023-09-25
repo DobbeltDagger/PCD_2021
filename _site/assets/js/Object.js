@@ -64,21 +64,30 @@ class Object {
     // build slides
     // slide 1
     const slide1 = document.createElement("div");
+    const inside = document.createElement("div");
+    inside.className = "inside";
     const portrait = document.createElement("img");
     portrait.src = this.presenter.portraitUrl;
     const bio = document.createElement("div");
     bio.innerHTML = this.presenter.bio;
     // slide 2
     const slide2 = document.createElement("div");
+    const insideTwo = document.createElement("div");
+    insideTwo.className = "inside";
+    const secondImg = document.createElement("img");
+    secondImg.src = this.presenter.secondImg;
     const textElm = document.createElement("div");
     textElm.innerHTML = this.presenter.text;
 
     // append stuff
-    slide1.appendChild(portrait);
-    slide1.appendChild(bio);
+    inside.appendChild(portrait);
+    inside.appendChild(bio);
+    slide1.appendChild(inside)
     slWrap.appendChild(slide1);
     // append for slide 2
-    slide2.appendChild(textElm)
+    insideTwo.appendChild(secondImg);
+    insideTwo.appendChild(textElm)
+    slide2.appendChild(insideTwo);
     slWrap.appendChild(slide2);
   }
 

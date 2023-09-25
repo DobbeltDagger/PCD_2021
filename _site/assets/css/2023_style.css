@@ -291,16 +291,30 @@ a#enterBtn.hidden {
   border: 2px solid blue;
   opacity: 0.0;
   transition: opacity 500ms ease-in-out;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  color: white;  
 }
 #slideWrapper > div.shown {
   opacity: 1.0;
 }
 
-#slideWrapper > div > div {
-  font-size: 1.5em;
-  line-height: 1.1em;
-  color: white;
+#slideWrapper .inside {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 3em;
+  padding: 1em;
+  max-width: 1280px;
 }
+#slideWrapper .inside img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 /* *************************************************************** */
