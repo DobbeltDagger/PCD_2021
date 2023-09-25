@@ -25,8 +25,18 @@ class Object {
   //////////////////////////////////////////
   // setup this object
   init(loader, scene) {
-    console.log("Hej INIT!")
+    console.log("init was run")
     this.loadModel(loader, scene, this.modelUrl) // '/assets/2023_models/gltf/Flower/Flower.glb');
+  }
+
+
+  //////////////////////////////////////////
+  // set up the video source!
+  prepareVideo() {
+    const vid = document.querySelector("#videoWrapper video");
+    // console.log("vid:", vid);
+    vid.pause();
+    vid.src = this.videoUrl;
   }
 
 
@@ -44,7 +54,7 @@ class Object {
     // or this is maybe another function??
 
     vid.classList.remove("hidden");
-    // vid.play();
+    vid.play();
   }
 
 

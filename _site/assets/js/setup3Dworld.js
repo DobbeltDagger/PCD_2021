@@ -12,6 +12,9 @@ let cube;
 let light1, light2;
 let scene, camera, renderer, controls;
 
+// setup how to navigate cam
+let currFlyMode = "pan"; // zoom out, pan, zoom in, overlays!
+let timeToChangeFlyMode = false; // this trickers new flyMode to begin ..
 
 
 /////////////////////////////////////////////
@@ -36,18 +39,34 @@ const setupWorldNav = () => {
 
   // honey
   document.getElementById("wn1").addEventListener("click", function(e) {
-    e.preventDefault();
-    console.log("wn1 clicked!");
+    e.preventDefault(); console.log("wn1 clicked! Honey");
     flyTo(1);
   })
-
   // Arnar
   document.getElementById("wn2").addEventListener("click", function(e) {
-    e.preventDefault();
-    console.log("wn2 clicked!");
+    e.preventDefault(); console.log("wn2 clicked! Arnar");
     flyTo(2);
   })
-
+  // Jussi
+  document.getElementById("wn3").addEventListener("click", function(e) {
+    e.preventDefault(); console.log("wn3 clicked! Jussi");
+    flyTo(3);
+  })
+  // Renée
+  document.getElementById("wn4").addEventListener("click", function(e) {
+    e.preventDefault(); console.log("wn4 clicked! Renée");
+    flyTo(4);
+  })
+  // Markus + Signe
+  document.getElementById("wn5").addEventListener("click", function(e) {
+    e.preventDefault(); console.log("wn5 clicked! Markus+Signe");
+    flyTo(5);
+  })
+  // Richard
+  document.getElementById("wn6").addEventListener("click", function(e) {
+    e.preventDefault(); console.log("wn6 clicked! Richard");
+    flyTo(6);
+  })
 }
 
 
@@ -55,6 +74,58 @@ const setupWorldNav = () => {
 // I am flying to destination now!!
 const flyTo = (destination) => {
   console.log("flyTo -> destination:", destination);
+
+  // Zoom out
+  // pan to next world
+  // Zoom in
+  // start overlays!!
+
+  changeFlyMode(currFlyMode); // testing
+
+
+  // for now, just start video and slides
+  objects[destination].prepareVideo();
+  objects[destination].playVideo();
+
+}
+
+
+
+/////////////////////////////////////////////
+// set the mode of navigation! ..
+// MODES: // zoomOut, pan, zoomIn, overlays
+const changeFlyMode = () => {
+
+  // show global var
+  console.log("changeFlyMode -> current flyMode:", currFlyMode);
+
+  if (currFlyMode == "zoomOut") {
+    currFlyMode = "pan";
+  }
+
+  if (currFlyMode == "pan") {
+    currFlyMode = "zoomIn";
+  }
+  
+  if (currFlyMode == "zoomIn") {
+    currFlyMode = "overlays";
+  }
+  
+  if (currFlyMode == "overlays") {
+    currFlyMode = "zoomOut";
+  }
+
+  // It's time to change modes!
+  // timeToChangeFlyMode = true;
+}
+
+
+/////////////////////////////////////////////
+// is it time to change to the next mode?? - this runs all the time!...
+const handleFlyMode = () => {
+
+  
+
 }
 
 
@@ -149,6 +220,8 @@ const init3D = () => {
 // Animate the scene
 const animate = () => {
 	requestAnimationFrame( animate );
+
+  handleFlyMode(); // is it time to change modes?
 
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
