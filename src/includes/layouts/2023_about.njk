@@ -12,8 +12,9 @@
         <div class="peopleWrapper">
           {% for thumb in collections.aboutAscending2023 | reverse() %}
             <div class="peopleEntry">
+              <a name="{{ thumb.data.sortName }}"></a>
               <span class="thumb">
-
+                
                 {% if "#" in thumb.data.url %}
                   <img src='{{ thumb.data.thumbUrl }}' title='{{ thumb.data.name }}'>
                 {% else %}

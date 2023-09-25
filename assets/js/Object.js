@@ -2,24 +2,32 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+import { worldData } from './myWorldsData.js';
+
 
 //////////////////////////////////////////
 // class for all 3d objects in environment
 class Object {
   
-  constructor(x, y, z) {
-    this.model = null;
-    this.position = { x: x || 0, y: y || 0, z: z || 0 };
-    this.rotation = 0;
+  // constructor(x, y, z) {
+  constructor(modelUrl, position, rotation, lights, video, presenter) {
+    this.modelUrl = modelUrl || ""; // path for model
+    this.model; // for the model itself!!
+    this.position = { x: position.x || 0, y: position.y || 0, z: position.z || 0 };
+    this.rotation = rotation || 0;
     this.modelIsLoaded = false;
-    this.video = "";
+    this.lights = lights || []; // for lights around object!! ..
+    this.video = video || "";
+    // bio and text for presenter
+    this.presenter = presenter || {}
   }
 
 
   //////////////////////////////////////////
   // setup this object
-  init() {
+  init(loader, scene) {
     console.log("Hej INIT!")
+    this.loadModel(loader, scene, this.modelUrl) // '/assets/2023_models/gltf/Flower/Flower.glb');
   }
 
 
@@ -38,9 +46,6 @@ class Object {
 
     vid.classList.remove("hidden");
     // vid.play();
-    
-
-
   }
 
 

@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { Object } from "/assets/js/Object.js";
+import { worldData } from './myWorldsData.js';
 
 // global vars
 let isEnterClicked = false;
@@ -81,12 +82,33 @@ const init3D = () => {
   loader = new GLTFLoader();
 
   // My world objects array
+  for (let i = 0; i < worldData.length; i++) {
+    console.log("worldData[i]:", worldData[i]);
+    const rndX = (Math.random() * 4) - 2;
+    const rndY = (Math.random() * 4) - 2;
+    const rndZ = (Math.random() * 4) - 2;
+    const pos = { x: rndX, y: rndY, z: rndZ };
+    objects[i] = new Object(
+      worldData[i].modelUrl,
+      pos, // worldData[i].position,
+      worldData[i].rotation,
+      worldData[i].lights,
+      worldData[i].video,
+      worldData[i].presenter
+    )
+    objects[i].init(loader, scene);
+  }
+
+  // testing vid!
+  objects[0].playVideo();
+
+  /*
+  objects[i].init();
   for (let i = 0; i < 7; i++) {
     const rndX = (Math.random() * 4) - 2;
     const rndY = (Math.random() * 4) - 2;
     const rndZ = (Math.random() * 4) - 2;
     objects[i] = new Object(rndX, rndY, rndZ);
-    // objects[i].init();
   }
   objects[0].loadModel(loader, scene, '/assets/2023_models/ArnarsPeber/apple.gltf');
   objects[0].playVideo();
@@ -98,6 +120,7 @@ const init3D = () => {
   objects[5].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/04.gltf'); // THAT WORKED!!
   objects[6].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/05.gltf'); // THAT WORKED!!
   console.log("objects:", objects);
+  */
 
 
   ///////////////////////////////
