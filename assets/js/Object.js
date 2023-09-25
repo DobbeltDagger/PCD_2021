@@ -87,12 +87,22 @@ class Object {
   // styart paying the slideshow here!
   playSlides() {
     const slWrap = document.getElementById("slideWrapper");
+    
+    // remove 
+    
     // show the slideshow
     slWrap.classList.add("shown");
 
+    const slides = document.querySelectorAll("#slideWrapper > div");
+    console.log("slides:", slides);
+    let currentSlide = 0;
+
     // now, start slides
     const slidesInterval = setInterval(function() {
-      console.log("NEW SLIDE!!!!")
+      // console.log("NEW SLIDE!!!!")
+      slides[currentSlide].classList.add("shown");
+      currentSlide++;
+      if (currentSlide >= slides.length) currentSlide = 0;
     }, 500);    
   }
 
