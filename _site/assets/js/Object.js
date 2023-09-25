@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-
 import { worldData } from './myWorldsData.js';
 
 
@@ -10,14 +9,14 @@ import { worldData } from './myWorldsData.js';
 class Object {
   
   // constructor(x, y, z) {
-  constructor(modelUrl, position, rotation, lights, video, presenter) {
+  constructor(modelUrl, position, rotation, lights, videoUrl, presenter) {
     this.modelUrl = modelUrl || ""; // path for model
     this.model; // for the model itself!!
     this.position = { x: position.x || 0, y: position.y || 0, z: position.z || 0 };
     this.rotation = rotation || 0;
     this.modelIsLoaded = false;
     this.lights = lights || []; // for lights around object!! ..
-    this.video = video || "";
+    this.videoUrl = videoUrl || "";
     // bio and text for presenter
     this.presenter = presenter || {}
   }

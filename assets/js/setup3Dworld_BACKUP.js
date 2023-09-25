@@ -31,34 +31,6 @@ const setupEnterBtnClick = () => {
 
 
 /////////////////////////////////////////////
-// setup a test way to navigate worlds easy!
-const setupWorldNav = () => {
-
-  // honey
-  document.getElementById("wn1").addEventListener("click", function(e) {
-    e.preventDefault();
-    console.log("wn1 clicked!");
-    flyTo(1);
-  })
-
-  // Arnar
-  document.getElementById("wn2").addEventListener("click", function(e) {
-    e.preventDefault();
-    console.log("wn2 clicked!");
-    flyTo(2);
-  })
-
-}
-
-
-/////////////////////////////////////////////
-// I am flying to destination now!!
-const flyTo = (destination) => {
-  console.log("flyTo -> destination:", destination);
-}
-
-
-/////////////////////////////////////////////
 // init the world videos
 const initVideos = () => {
 
@@ -121,7 +93,7 @@ const init3D = () => {
       pos, // worldData[i].position,
       worldData[i].rotation,
       worldData[i].lights,
-      worldData[i].videoUrl,
+      worldData[i].video,
       worldData[i].presenter
     )
     objects[i].init(loader, scene);
@@ -130,6 +102,25 @@ const init3D = () => {
   // testing vid!
   objects[0].playVideo();
 
+  /*
+  objects[i].init();
+  for (let i = 0; i < 7; i++) {
+    const rndX = (Math.random() * 4) - 2;
+    const rndY = (Math.random() * 4) - 2;
+    const rndZ = (Math.random() * 4) - 2;
+    objects[i] = new Object(rndX, rndY, rndZ);
+  }
+  objects[0].loadModel(loader, scene, '/assets/2023_models/ArnarsPeber/apple.gltf');
+  objects[0].playVideo();
+
+  objects[1].loadModel(loader, scene, '/assets/2023_models/gltf/Flower/Flower.glb'); // worked!
+  objects[2].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/01.gltf'); // THAT WORKED!!
+  objects[3].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/02.gltf'); // THAT WORKED!!
+  objects[4].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/03.gltf'); // THAT WORKED!!
+  objects[5].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/04.gltf'); // THAT WORKED!!
+  objects[6].loadModel(loader, scene, '/assets/2023_models/gltf_embedded/05.gltf'); // THAT WORKED!!
+  console.log("objects:", objects);
+  */
 
 
   ///////////////////////////////
@@ -169,7 +160,6 @@ const animate = () => {
 
 export {
   setupEnterBtnClick,
-  setupWorldNav,
   init3D,
   initVideos,
   animate

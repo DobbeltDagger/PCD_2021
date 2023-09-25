@@ -291,6 +291,42 @@ a#enterBtn.hidden {
 }
 
 
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* WORLD NAV WRAPPER */
+
+
+.worldMenuWrapper {
+  position: fixed;
+  z-index: 9999;
+  bottom: 0px;
+  right: 0px;
+  border: 1px solid pink;
+}
+
+.worldMenuWrapper ul {
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);  
+}
+.worldMenuWrapper ul li {
+  display: inline;
+}
+.worldMenuWrapper ul li a {
+  display: block;
+  padding: 0px 0.25em;
+  color: var(--main-text-color);
+  font-size: 2em;
+  font-weight: bold;
+}
+.worldMenuWrapper ul li a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: tomato;
+}
+
+
+
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
