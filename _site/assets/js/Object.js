@@ -57,10 +57,10 @@ class Object {
 
   //////////////////////////////////////////
   // setup the slides here
-  prepareSlides() {
+  prepareSlides(interval) {
 
     // show the overlay!
-    showOverlay();
+    showOverlay(interval);
 
     const slWrap = document.getElementById("slideWrapper");
     slWrap.innerHTML = "";
@@ -98,7 +98,7 @@ class Object {
 
   //////////////////////////////////////////
   // styart paying the slideshow here!
-  playSlides() {
+  playSlides(myInterval) {
     const slWrap = document.getElementById("slideWrapper");
     
     // show the slideshow
@@ -123,7 +123,8 @@ class Object {
       currentSlide++;
       // if (currentSlide >= slides.length) currentSlide = 0; // is never used here!
     }, 500)
-    this.slidesInterval = setInterval(function() {
+    // using the global interval!!!!
+    myInterval = setInterval(function() {
       hideSlides();
       console.log("currentSlide:", currentSlide);
       // check if we have the slide:

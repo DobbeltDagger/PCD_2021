@@ -13,9 +13,8 @@ let cube;
 let light1, light2;
 let scene, camera, renderer, controls;
 
-// setup how to navigate cam
-let currFlyMode = "pan"; // zoom out, pan, zoom in, overlays!
-let timeToChangeFlyMode = false; // this trickers new flyMode to begin ..
+// here's the slide interval, global!
+let slidesInterval;
 
 
 /////////////////////////////////////////////
@@ -30,6 +29,28 @@ const setupEnterBtnClick = () => {
 
     const vid = document.querySelector("#videoWrapper video");
     vid.play();
+  })
+}
+
+
+/////////////////////////////////////////////
+// closing overlay button
+const setupCloseOverlayButton = () => {
+  const btn = document.getElementById("closeOverlay");
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideOverlay(slidesInterval);
+  })
+}
+
+
+/////////////////////////////////////////////
+// closing overlay with overlay logo!
+const setupWhiteLogoClose = () => {
+  const whLogo = document.querySelector(".roundWhite");
+  whLogo.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideOverlay(slidesInterval);
   })
 }
 
@@ -75,58 +96,11 @@ const setupWorldNav = () => {
 // I am flying to destination now!!
 const flyTo = (destination) => {
   console.log("flyTo -> destination:", destination);
-
-  // Zoom out
-  // pan to next world
-  // Zoom in
-  // start overlays!!
-
-  changeFlyMode(currFlyMode); // testing
-
   // for now, just start video and slides
   objects[destination].prepareVideo();
   objects[destination].playVideo();
-  objects[destination].prepareSlides();
-  objects[destination].playSlides();
-}
-
-
-
-/////////////////////////////////////////////
-// set the mode of navigation! ..
-// MODES: // zoomOut, pan, zoomIn, overlays
-const changeFlyMode = () => {
-
-  // show global var
-  console.log("changeFlyMode -> current flyMode:", currFlyMode);
-
-  if (currFlyMode == "zoomOut") {
-    currFlyMode = "pan";
-  }
-
-  if (currFlyMode == "pan") {
-    currFlyMode = "zoomIn";
-  }
-  
-  if (currFlyMode == "zoomIn") {
-    currFlyMode = "overlays";
-  }
-  
-  if (currFlyMode == "overlays") {
-    currFlyMode = "zoomOut";
-  }
-
-  // It's time to change modes!
-  // timeToChangeFlyMode = true;
-}
-
-
-/////////////////////////////////////////////
-// is it time to change to the next mode?? - this runs all the time!...
-const handleFlyMode = () => {
-
-  
-
+  objects[destination].prepareSlides(slidesInterval);
+  objects[destination].playSlides(slidesInterval);
 }
 
 
@@ -208,8 +182,6 @@ const init3D = () => {
 const animate = () => {
 	requestAnimationFrame( animate );
 
-  handleFlyMode(); // is it time to change modes?
-
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
 
@@ -230,6 +202,8 @@ const animate = () => {
 ///////////////////////////////
 export {
   setupEnterBtnClick,
+  setupCloseOverlayButton,
+  setupWhiteLogoClose,
   setupWorldNav,
   init3D,
   animate

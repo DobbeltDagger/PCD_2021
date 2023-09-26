@@ -1,7 +1,6 @@
 ////////////////////////////////////////
 // turn on the overlay
-const showOverlay = () => {
-
+const showOverlay = (interval) => {
   // show overlay close button
   document.getElementById("closeOverlay").classList.remove("hidden");
   // show all overlays!
@@ -16,7 +15,7 @@ const showOverlay = () => {
 
 ////////////////////////////////////////
 // hide the overlay
-const hideOverlay = () => {
+const hideOverlay = (interval) => {
 
   // show overlay close button
   document.getElementById("closeOverlay").classList.add("hidden");
@@ -27,36 +26,15 @@ const hideOverlay = () => {
   // show white logo!
   document.querySelector("#logo a.round img").classList.remove("hidden")
   document.querySelector("#logo a.roundWhite img").classList.add("hidden");
+
+  // important to clear our interval!
+  clearInterval(interval);
 }
 
-
-
-/////////////////////////////////////////////
-// closing overlay button
-const setupCloseOverlayButton = () => {
-  const btn = document.getElementById("closeOverlay");
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    hideOverlay();
-  })
-}
-
-
-/////////////////////////////////////////////
-// closing overlay with overlay logo!
-const setupWhiteLogoClose = () => {
-  const whLogo = document.querySelector(".roundWhite");
-  whLogo.addEventListener("click", (e) => {
-    e.preventDefault();
-    hideOverlay();
-  })
-}
 
 
 /////////////////////////////////////////////
 export {
   showOverlay,
-  hideOverlay,
-  setupCloseOverlayButton,
-  setupWhiteLogoClose
+  hideOverlay
 }

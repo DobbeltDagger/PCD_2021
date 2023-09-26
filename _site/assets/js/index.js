@@ -1,13 +1,14 @@
 import {
   setupEnterBtnClick,
+  setupCloseOverlayButton,
+  setupWhiteLogoClose,
   setupWorldNav,
   init3D,
   animate
 } from '/assets/js/setup3Dworld.js';
-import {
-  setupCloseOverlayButton,
-  setupWhiteLogoClose
-} from './functions.js';
+// import {
+// 
+// } from './functions.js';
 
 
 window.addEventListener("DOMContentLoaded", (e) => {
