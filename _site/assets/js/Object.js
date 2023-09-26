@@ -21,7 +21,8 @@ class Object {
     // bio and text for presenter
     this.presenter = presenter || {}
 
-    this.timeInterval = 8000;
+    this.timeInterval = 2500; // 8000; // testing!
+    this.slidesInterval;
   }
 
 
@@ -46,9 +47,6 @@ class Object {
   //////////////////////////////////////////
   // set the vid src and play the vid
   playVideo() {
-    // empty the elm ...
-    // const vidWrap = document.getElementById("videoWrapper");
-    // console.log("vidWrap:", vidWrap);
     const vid = document.querySelector("#videoWrapper video");
     console.log("vid:", vid);
     vid.classList.remove("hidden");
@@ -60,12 +58,11 @@ class Object {
   //////////////////////////////////////////
   // setup the slides here
   prepareSlides() {
-    
+
+    // show the overlay!
     showOverlay();
 
-
     const slWrap = document.getElementById("slideWrapper");
-    
     slWrap.innerHTML = "";
 
     // build slides
@@ -104,8 +101,6 @@ class Object {
   playSlides() {
     const slWrap = document.getElementById("slideWrapper");
     
-    // remove 
-    
     // show the slideshow
     slWrap.classList.add("shown");
 
@@ -116,6 +111,7 @@ class Object {
     // hide all the slides
     function hideSlides() {
       for(let i = 0; i < slides.length; i++) { slides[i].classList.remove("shown"); }
+      document.getElementById("threeWrapper").classList.add("hidden");
     }
 
     // now, start slides
@@ -125,13 +121,19 @@ class Object {
       hideSlides();
       slides[currentSlide].classList.add("shown");
       currentSlide++;
-      if (currentSlide >= slides.length) currentSlide = 0;      
+      // if (currentSlide >= slides.length) currentSlide = 0; // is never used here!
     }, 500)
-    const slidesInterval = setInterval(function() {
+    this.slidesInterval = setInterval(function() {
       hideSlides();
-      slides[currentSlide].classList.add("shown");
+      console.log("currentSlide:", currentSlide);
+      // check if we have the slide:
+      if (currentSlide < slides.length) { slides[currentSlide].classList.add("shown"); }
       currentSlide++;
-      if (currentSlide >= slides.length) currentSlide = 0;
+      // make OBJECT MODE AS THE LAST SLIDE!!!
+      if (currentSlide > slides.length) {
+        document.getElementById('threeWrapper').classList.remove("hidden");
+        currentSlide = 0;
+      }
     }, _this.timeInterval);    
   }
 

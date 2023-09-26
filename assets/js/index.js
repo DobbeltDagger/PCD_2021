@@ -2,7 +2,6 @@ import {
   setupEnterBtnClick,
   setupWorldNav,
   init3D,
-  initVideos,
   animate
 } from '/assets/js/setup3Dworld.js';
 import {
@@ -34,6 +33,5 @@ window.addEventListener("DOMContentLoaded", (e) => {
   setupWhiteLogoClose();
   setupWorldNav();
   init3D();
-  initVideos();
   animate();
 })

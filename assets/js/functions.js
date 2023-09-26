@@ -5,7 +5,7 @@ const showOverlay = () => {
   // show overlay close button
   document.getElementById("closeOverlay").classList.remove("hidden");
   // show all overlays!
-  document.getElementById("threeWrapper").classList.remove("hidden");
+  // document.getElementById("threeWrapper").classList.remove("hidden");
   document.getElementById("videoWrapper").classList.remove("hidden");
   document.getElementById("presenterWrapper").classList.remove("hidden");
   // show white logo!

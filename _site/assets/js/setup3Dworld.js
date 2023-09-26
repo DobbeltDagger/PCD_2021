@@ -83,13 +83,11 @@ const flyTo = (destination) => {
 
   changeFlyMode(currFlyMode); // testing
 
-
   // for now, just start video and slides
   objects[destination].prepareVideo();
   objects[destination].playVideo();
   objects[destination].prepareSlides();
   objects[destination].playSlides();
-
 }
 
 
@@ -128,15 +126,6 @@ const changeFlyMode = () => {
 const handleFlyMode = () => {
 
   
-
-}
-
-
-/////////////////////////////////////////////
-// init the world videos
-const initVideos = () => {
-
-  console.log("init videos was run");
 
 }
 
@@ -201,11 +190,6 @@ const init3D = () => {
     objects[i].init(loader, scene);
   }
 
-  // testing vid!
-  objects[0].playVideo();
-
-
-
   ///////////////////////////////
   // resize
   window.addEventListener( 'resize', onWindowResize, false );
@@ -248,6 +232,5 @@ export {
   setupEnterBtnClick,
   setupWorldNav,
   init3D,
-  initVideos,
   animate
 }
