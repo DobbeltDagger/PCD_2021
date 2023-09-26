@@ -1,4 +1,14 @@
-import { setupEnterBtnClick, setupCloseOverlayButton, setupWorldNav, init3D, initVideos, animate } from '/assets/js/setup3Dworld.js';
+import {
+  setupEnterBtnClick,
+  setupWorldNav,
+  init3D,
+  initVideos,
+  animate
+} from '/assets/js/setup3Dworld.js';
+import {
+  setupCloseOverlayButton,
+  setupWhiteLogoClose
+} from './functions.js';
 
 
 window.addEventListener("DOMContentLoaded", (e) => {
@@ -21,6 +31,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   // animate has to run latest, because it loops!
   setupEnterBtnClick();
   setupCloseOverlayButton();
+  setupWhiteLogoClose();
   setupWorldNav();
   init3D();
   initVideos();

@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { Object } from "/assets/js/Object.js";
 import { worldData } from './myWorldsData.js';
+import { hideOverlay } from './functions.js';
 
 // global vars
 let isEnterClicked = false;
@@ -29,17 +30,6 @@ const setupEnterBtnClick = () => {
 
     const vid = document.querySelector("#videoWrapper video");
     vid.play();
-  })
-}
-
-
-/////////////////////////////////////////////
-// closing overlay button
-setupCloseOverlayButton = () => {
-  const btn = document.getElementById("closeOverlay");
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log("CLOSING THE OVERLAY!")
   })
 }
 
@@ -255,7 +245,6 @@ const animate = () => {
 
 export {
   setupEnterBtnClick,
-  setupCloseOverlayButton,
   setupWorldNav,
   init3D,
   initVideos,

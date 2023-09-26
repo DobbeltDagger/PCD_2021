@@ -220,7 +220,14 @@ a#enterBtn.hidden {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 9000;
+  z-index: 1000; /* 9000; */
+  opacity: 1.0;
+  visibility: visible;
+  transition: opacity 250ms ease-in-out;  
+}
+#threeWrapper.hidden {
+  opacity: 0.0;
+  visibility: hidden;
 }
 
 
@@ -242,8 +249,15 @@ a#enterBtn.hidden {
   left: 0px;
   width: 100%;
   height: 100dvh;
-  z-index: -1;
-  background-color: black;
+  z-index: 1001; /* -1; */
+  background-color: #333333;
+  opacity: 1.0;
+  visibility: visible;
+  transition: opacity 250ms ease-in-out;
+}
+#videoWrapper.hidden {
+  opacity: 0.0;
+  visibility: hidden;
 }
 
 #theVid {
@@ -265,13 +279,22 @@ a#enterBtn.hidden {
   left: 0px;
   width: 100%;
   height: 100dvh;
-  z-index: 0;
+  z-index: 1002; /* 0; */
+  opacity: 1.0;
+  visibility: visible;
+  transition: opacity 250ms ease-in-out;    
 }
+#presenterWrapper.hidden {
+  opacity: 0.0;
+  visibility: hidden;
+}
+
+
 
 /* close button */
 .closeOverlayWrapper {
   position: fixed;
-  top: 1em;
+  top: 1.75em;
   right: 1em;
   z-index: 9999;
 }
@@ -465,7 +488,8 @@ a:hover#closeOverlay {
   }
 
   /* round logo */
-  #logo a.round {
+  #logo a.round,
+  #logo a.roundWhite {
     position: absolute;
     top: -5px;
     left: -5px;
@@ -476,10 +500,20 @@ a:hover#closeOverlay {
     opacity: 0.9;
     transform: rotateZ(-1deg);
   }
-  #logo a.round img {
+  #logo a.roundWhite {
+    opacity: 1.0;
+  }
+  #logo a.round img,
+  #logo a.roundWhite img {
     max-width: 100%;
     height: auto;
+    opacity: 1.0;
+    transition: opacity 250ms ease-in-out;
   }
+  #logo a.round img.hidden,
+  #logo a.roundWhite img.hidden {
+    opacity: 0.0;
+  }  
 
   #logo a.text {
     position: absolute;
@@ -814,7 +848,8 @@ a:hover#closeOverlay {
     overflow-x: hidden;
   }
 
-  #logo a.round {
+  #logo a.round,
+  #logo a.roundWhite {
     position: fixed;
     top: -3px;
     left: -3px;
