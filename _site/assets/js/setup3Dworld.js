@@ -34,6 +34,17 @@ const setupEnterBtnClick = () => {
 
 
 /////////////////////////////////////////////
+// closing overlay button
+setupCloseOverlayButton = () => {
+  const btn = document.getElementById("closeOverlay");
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("CLOSING THE OVERLAY!")
+  })
+}
+
+
+/////////////////////////////////////////////
 // setup a test way to navigate worlds easy!
 const setupWorldNav = () => {
 
@@ -244,6 +255,7 @@ const animate = () => {
 
 export {
   setupEnterBtnClick,
+  setupCloseOverlayButton,
   setupWorldNav,
   init3D,
   initVideos,

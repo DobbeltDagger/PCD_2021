@@ -268,6 +268,33 @@ a#enterBtn.hidden {
   z-index: 0;
 }
 
+/* close button */
+.closeOverlayWrapper {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 9999;
+}
+a#closeOverlay {
+  display: block;
+  font-size: 5em;
+  transform: rotate(45deg);
+  /* font-family: sans-serif; */
+  font-weight: 300;
+  z-index: 9999;
+  color: white;
+  opacity: 1.0;
+  visibility: visible;
+}
+a#closeOverlay.hidden {
+  opacity: 0.0;
+  visibility: hidden;
+}
+a:hover#closeOverlay {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 #slideWrapper {
   position: fixed;
   top: 0px;
@@ -445,7 +472,7 @@ a#enterBtn.hidden {
     width: 80px;
     height: auto;
     float: left;
-    z-index: 1000;
+    z-index: 9999;
     opacity: 0.9;
     transform: rotateZ(-1deg);
   }
